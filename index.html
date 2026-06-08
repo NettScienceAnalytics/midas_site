@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' fill='%23C8922A' rx='4'/><text x='18' y='26' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='22' fill='%231B3A6B'>M</text></svg>">
 <title>MIDAS — Marketing Intelligence & Decision Automation System | NettScience</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -25,6 +27,13 @@
 .btn-teal{background:var(--teal);color:var(--white)}.btn-teal:hover{background:var(--teal-light);transform:translateY(-1px)}
 .btn-navy{background:var(--navy);color:var(--white)}.btn-navy:hover{background:var(--navy-deep);transform:translateY(-1px)}
 .btn-lg{font-size:15px;padding:13px 26px;border-radius:var(--r-lg)}.btn-xl{font-size:16px;padding:15px 34px;border-radius:var(--r-lg)}
+.nav-dropdown{position:relative;display:inline-block}
+.nav-dd-btn{font-size:12.5px;font-weight:500;color:rgba(255,255,255,.7);padding:6px 11px;border-radius:var(--r);transition:var(--tr);cursor:pointer;background:none;border:none;font-family:var(--f-b)}
+.nav-dd-btn:hover{color:var(--white);background:rgba(255,255,255,.1)}
+.nav-dd-menu{display:none;position:absolute;top:100%;left:0;background:var(--navy-deep);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);min-width:220px;z-index:2000;box-shadow:0 8px 24px rgba(0,0,0,.3);margin-top:4px}
+.nav-dd-menu.open{display:block}
+.nav-dd-item{display:block;width:100%;text-align:left;font-size:12.5px;color:rgba(255,255,255,.75);padding:10px 16px;background:none;border:none;cursor:pointer;font-family:var(--f-b);transition:var(--tr)}
+.nav-dd-item:hover{background:rgba(255,255,255,.1);color:var(--white)}
 .nav-prog{height:2px;background:linear-gradient(90deg,var(--teal),var(--gold));transform-origin:left;transform:scaleX(0);transition:transform .1s;position:absolute;bottom:-1px;left:0;right:0}
 .sec{padding:88px 2rem}.sec-sm{padding:56px 2rem}.sec-dark{background:var(--navy-deep)}.sec-navy{background:var(--navy)}.sec-off{background:var(--off)}
 .w{max-width:1200px;margin:0 auto}.wm{max-width:960px;margin:0 auto}.ws{max-width:740px;margin:0 auto}
@@ -94,7 +103,8 @@ h1{font-size:clamp(2.4rem,5vw,4rem);font-weight:800}h2{font-size:clamp(1.75rem,3
 .panel{display:none}.panel.active{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
 .ctable{width:100%;border-collapse:collapse;margin-top:26px}.ctable th{background:var(--navy);color:var(--white);padding:11px 15px;text-align:left;font-family:var(--f-m);font-size:10px;letter-spacing:1.5px;text-transform:uppercase}.ctable td{padding:12px 15px;border-bottom:1px solid var(--light);font-size:.86rem;vertical-align:top}.ctable tr:nth-child(even) td{background:var(--off)}.ctable tr:hover td{background:rgba(15,123,138,.04)}
 .cname{font-family:var(--f-d);font-weight:700;color:var(--navy)}.cb{font-family:var(--f-m);font-size:9px;letter-spacing:1px;padding:2px 8px;border-radius:100px}.cb-t{background:rgba(15,123,138,.12);color:var(--teal)}.cb-g{background:rgba(200,146,42,.12);color:#9A6E1E}.cb-n{background:rgba(27,58,107,.12);color:var(--navy)}
-.secitem{display:flex;gap:14px;align-items:flex-start;padding:18px;border-radius:var(--r);background:var(--off);border:1px solid var(--light);transition:var(--tr)}.secitem:hover{border-color:rgba(15,123,138,.3)}.secnum{font-family:var(--f-d);font-size:1.4rem;font-weight:800;color:rgba(15,123,138,.22);line-height:1;flex-shrink:0;width:26px}
+.secitem{display:flex;gap:14px;align-items:flex-start;padding:18px;border-radius:var(--r);background:var(--off);border:1px solid var(--light);transition:var(--tr)}.secitem:hover{border-color:rgba(15,123,138,.3)}.secnum{font-family:var(--f-d);font-size:1.1rem;font-weight:800;color:var(--teal);line-height:1;flex-shrink:0;width:40px;min-width:40px;margin-right:8px;opacity:0.8}
+.faq-panel{display:block}
 .faq-item{border-bottom:1px solid var(--light)}.faq-q{display:flex;justify-content:space-between;align-items:center;padding:16px 0;cursor:pointer;font-weight:600;font-size:.95rem;color:var(--navy);gap:12px}.faq-q:hover{color:var(--teal)}.faq-icon{flex-shrink:0;color:var(--teal);font-size:1.1rem;transition:var(--tr)}.faq-a{padding:0 0 16px;color:var(--mid);line-height:1.7;font-size:.9rem;display:none}.faq-item.open .faq-a{display:block}.faq-item.open .faq-icon{transform:rotate(45deg)}
 .cta-band{background:linear-gradient(135deg,var(--navy-deep) 0%,var(--navy) 55%,#0A4B5C 100%);padding:72px 2rem;text-align:center;position:relative;overflow:hidden}.cta-band::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(200,146,42,.09) 0%,transparent 68%)}
 .cta-opts{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:26px}.copt{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:20px 26px;min-width:220px;text-align:left;transition:var(--tr);cursor:pointer}.copt:hover{background:rgba(255,255,255,.1);transform:translateY(-2px)}.copt-l{font-family:var(--f-m);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px}.copt-t{font-family:var(--f-d);font-weight:700;font-size:1rem;color:var(--white);margin-bottom:3px}.copt-s{font-size:.77rem;color:rgba(255,255,255,.42)}
@@ -103,77 +113,12 @@ h1{font-size:clamp(2.4rem,5vw,4rem);font-weight:800}h2{font-size:clamp(1.75rem,3
 .chart{display:flex;justify-content:space-between;align-items:flex-end;height:130px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.1);gap:8px}.bwrap{display:flex;flex-direction:column;align-items:center;gap:5px;flex:1}.bar{width:100%;border-radius:3px 3px 0 0}.blbl{font-size:10px;color:rgba(255,255,255,.42)}.bval{font-size:11px;font-weight:700;color:var(--teal-light)}.bval.hi{color:var(--gold)}
 .nb{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;font-family:var(--f-d);font-size:13px;font-weight:800;flex-shrink:0}.nb-g{background:var(--gold);color:var(--navy-deep)}.nb-t{background:var(--teal);color:var(--white)}.nb-n{background:var(--navy);color:var(--white)}
 .rec-card{background:var(--navy-deep);border-radius:var(--r-lg);padding:20px;font-size:.85rem}.rec-header{background:var(--navy);padding:10px 14px;border-radius:var(--r);margin-bottom:14px;display:flex;justify-content:space-between;align-items:center}.rec-row{display:flex;gap:10px;margin-bottom:8px;font-size:.82rem}.rec-lbl{color:rgba(255,255,255,.4);width:80px;flex-shrink:0;font-family:var(--f-m);font-size:9px;letter-spacing:.5px;text-transform:uppercase;padding-top:2px}.rec-val{color:rgba(255,255,255,.82)}.rec-btns{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:5px;margin-top:14px}.rbtn{padding:7px 4px;border-radius:4px;font-size:11px;font-weight:700;text-align:center;cursor:pointer}.rb-green{background:#15532B;color:#4ade80}.rb-red{background:#7F1D1D;color:#fca5a5}.rb-navy{background:var(--navy);color:rgba(255,255,255,.8)}.rb-grey{background:#2D3748;color:rgba(255,255,255,.5)}
-.exec-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-top:32px}.ef-item{padding:20px 16px;text-align:center;border-top:3px solid transparent}.ef1{border-top-color:var(--teal);background:rgba(15,123,138,.1)}.ef2{border-top-color:var(--navy);background:rgba(27,58,107,.1)}.ef3{border-top-color:var(--gold);background:rgba(200,146,42,.1)}.ef4{border-top-color:#7C3AED;background:rgba(124,58,237,.08)}.ef5{border-top-color:#10B981;background:rgba(16,185,129,.08)}.ef-num{font-family:var(--f-d);font-size:1.6rem;font-weight:800;line-height:1;margin-bottom:6px}.ef-label{font-size:.82rem;font-weight:700;margin-bottom:5px}.ef-desc{font-size:.76rem;color:rgba(255,255,255,.55);line-height:1.5}
+.exec-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-top:32px}.ef-item{padding:20px 16px;text-align:center;border-top:3px solid transparent}.ef1{border-top-color:var(--teal);background:rgba(15,123,138,.1)}.ef2{border-top-color:var(--navy);background:rgba(27,58,107,.1)}.ef3{border-top-color:var(--gold);background:rgba(200,146,42,.1)}.ef4{border-top-color:#7C3AED;background:rgba(124,58,237,.08)}.ef5{border-top-color:#10B981;background:rgba(16,185,129,.08)}.ef-num{font-family:var(--f-d);font-size:1.6rem;font-weight:800;line-height:1;margin-bottom:6px;color:var(--navy)}.ef-label{font-size:.82rem;font-weight:700;margin-bottom:5px;color:var(--navy)}.ef-desc{font-size:.76rem;color:var(--dark);line-height:1.5}
 .ch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}.ch-card{border-radius:var(--r-lg);padding:22px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);transition:var(--tr)}.ch-card:hover{background:rgba(255,255,255,.07)}.ch-icon{font-size:1.8rem;margin-bottom:10px}.ch-name{font-family:var(--f-d);font-size:1rem;font-weight:700;color:var(--white);margin-bottom:6px}.ch-desc{font-size:.82rem;color:rgba(255,255,255,.56);line-height:1.5}
 footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;margin:0 auto}.ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:34px;margin-bottom:42px}.ft-tag{font-size:.82rem;color:rgba(255,255,255,.36);margin-top:10px;line-height:1.6;max-width:265px}.ftct{font-family:var(--f-m);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:13px}.ftl{display:block;font-size:12px;color:rgba(255,255,255,.48);margin-bottom:8px;transition:var(--tr)}.ftl:hover{color:var(--white)}.ft-bot{border-top:1px solid rgba(255,255,255,.06);padding-top:18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}.ft-copy{font-size:11px;color:rgba(255,255,255,.26)}.ft-parent{font-size:11px;color:rgba(255,255,255,.36)}.ft-parent a{color:var(--teal-light)}
 .page{display:none}.page.active{display:block}
 .l3-accent{color:#A78BFA}.l3-bg{background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.2);border-radius:var(--r-lg);padding:24px}
-/* ===== SOLUTIONS DROPDOWN ===== */
-.nav-dropdown{position:relative;display:inline-flex;align-items:center}
-.nav-dropdown>.nl{display:flex;align-items:center;gap:5px}
-.nav-dropdown>.nl::after{content:"";display:inline-block;width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:4px solid rgba(255,255,255,.55);transition:var(--tr);margin-top:1px}
-.nav-dropdown:hover>.nl::after,.nav-dropdown.open>.nl::after{border-top-color:var(--white);transform:rotate(180deg)}
-.dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;background:rgba(11,22,47,.98);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:8px;min-width:230px;z-index:2000;box-shadow:0 16px 48px rgba(0,0,0,.4)}
-.nav-dropdown:hover .dropdown-menu,.nav-dropdown.open .dropdown-menu{display:flex;flex-direction:column;gap:2px}
-.dditem{display:flex;flex-direction:column;padding:10px 14px;border-radius:var(--r);cursor:pointer;transition:var(--tr);border:none;background:none;text-align:left;width:100%}
-.dditem:hover{background:rgba(255,255,255,.08)}
-.dditem-label{font-family:var(--f-m);font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:2px}
-.dditem-title{font-size:13px;font-weight:500;color:rgba(255,255,255,.85);font-family:var(--f-b)}
-.dditem:hover .dditem-title{color:var(--white)}
-.dd-divider{height:1px;background:rgba(255,255,255,.07);margin:4px 0}
-
-/* ===== HAMBURGER MOBILE NAV ===== */
-.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;padding:8px;border:none;background:none;z-index:1100;margin-left:6px}
-.ham-line{width:22px;height:2px;background:rgba(255,255,255,.8);border-radius:2px;transition:var(--tr);display:block}
-.hamburger.open .ham-line:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.hamburger.open .ham-line:nth-child(2){opacity:0;transform:scaleX(0)}
-.hamburger.open .ham-line:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.mobile-nav{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(9,18,40,.99);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08);z-index:999;padding:16px;flex-direction:column;gap:4px;max-height:calc(100vh - 68px);overflow-y:auto}
-.mobile-nav.open{display:flex}
-.mnl{font-size:14px;font-weight:500;color:rgba(255,255,255,.75);padding:12px 14px;border-radius:var(--r);cursor:pointer;background:none;border:none;font-family:var(--f-b);text-align:left;width:100%;transition:var(--tr)}
-.mnl:hover{background:rgba(255,255,255,.08);color:var(--white)}
-.mnl.active{color:var(--white);background:rgba(255,255,255,.1)}
-.mob-section-label{font-family:var(--f-m);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.28);padding:10px 14px 4px;margin-top:6px}
-.mob-indent{padding-left:26px;font-size:13px}
-.mob-divider{height:1px;background:rgba(255,255,255,.07);margin:6px 0}
-.mob-cta-row{display:flex;gap:8px;padding:10px 14px;margin-top:4px}
-.mob-cta-row .btn{flex:1;justify-content:center}
-
-/* ===== DEMO MODAL ===== */
-.modal-overlay{display:none;position:fixed;inset:0;background:rgba(9,18,40,.85);backdrop-filter:blur(8px);z-index:3000;align-items:center;justify-content:center;padding:24px}
-.modal-overlay.open{display:flex}
-.modal-box{background:var(--navy-deep);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:44px 40px;max-width:480px;width:100%;position:relative;box-shadow:0 32px 80px rgba(0,0,0,.5)}
-.modal-box::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),var(--gold));border-radius:20px 20px 0 0}
-.modal-close{position:absolute;top:16px;right:18px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:rgba(255,255,255,.55);font-size:16px;transition:var(--tr)}
-.modal-close:hover{background:rgba(255,255,255,.14);color:var(--white)}
-.modal-eyebrow{font-family:var(--f-m);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
-.modal-title{font-family:var(--f-d);font-size:1.6rem;font-weight:800;color:var(--white);line-height:1.15;margin-bottom:6px}
-.modal-sub{font-size:.88rem;color:rgba(255,255,255,.48);line-height:1.55;margin-bottom:28px}
-.form-field{margin-bottom:18px}
-.form-label{display:block;font-family:var(--f-m);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:7px}
-.form-input,.form-textarea{width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:12px 15px;font-family:var(--f-b);font-size:.92rem;color:var(--white);transition:var(--tr);outline:none}
-.form-input:focus,.form-textarea:focus{border-color:var(--teal-light);background:rgba(15,123,138,.08);box-shadow:0 0 0 3px rgba(15,123,138,.15)}
-.form-input::placeholder,.form-textarea::placeholder{color:rgba(255,255,255,.25)}
-.form-textarea{resize:vertical;min-height:90px;line-height:1.55}
-.form-submit{width:100%;background:var(--gold);color:var(--navy-deep);font-family:var(--f-b);font-weight:700;font-size:15px;padding:14px;border:none;border-radius:var(--r-lg);cursor:pointer;transition:var(--tr);margin-top:6px;display:flex;align-items:center;justify-content:center;gap:8px}
-.form-submit:hover{background:var(--gold-light);transform:translateY(-1px);box-shadow:0 8px 24px rgba(200,146,42,.4)}
-.form-submit:disabled{opacity:.6;cursor:not-allowed;transform:none;box-shadow:none}
-.form-note{font-size:.77rem;color:rgba(255,255,255,.28);text-align:center;margin-top:12px;font-family:var(--f-m)}
-.form-success{display:none;text-align:center;padding:20px 0}
-.form-success-icon{font-size:2.8rem;margin-bottom:14px}
-.form-success-title{font-family:var(--f-d);font-size:1.3rem;font-weight:800;color:var(--white);margin-bottom:8px}
-.form-success-msg{font-size:.88rem;color:rgba(255,255,255,.5);line-height:1.6}
-
-@media(max-width:900px){
-  .hero-in,.g2,.g3,.g4,.layers,.ps,.panel.active,.ft-top,.smg,.loop,.exec-flow,.ch-grid{grid-template-columns:1fr}
-  .steps{flex-direction:column;align-items:flex-start}.steps::before{display:none}
-  .nav-links{display:none}
-  .tabs{flex-direction:column;align-items:center}
-  .hamburger{display:flex}
-  .nav-cta .btn-out{display:none}
-  .modal-box{padding:32px 22px}
-  .modal-title{font-size:1.35rem}
-}
+@media(max-width:900px){.hero-in,.g2,.g3,.g4,.layers,.ps,.panel.active,.ft-top,.smg,.loop,.exec-flow,.ch-grid{grid-template-columns:1fr}.steps{flex-direction:column;align-items:flex-start}.steps::before{display:none}.nav-links{display:none}.tabs{flex-direction:column;align-items:center}}
 </style>
 </head>
 <body>
@@ -186,92 +131,27 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
     <div class="nav-links">
       <button class="nl active" onclick="showPage('home')">Home</button>
       <button class="nl" onclick="showPage('platform')">Platform</button>
-      <div class="nav-dropdown" id="solutionsDropdown">
-        <button class="nl" onclick="toggleDropdown()">Solutions</button>
-        <div class="dropdown-menu">
-          <button class="dditem" onclick="showPage('l1');closeDropdown()">
-            <span class="dditem-title">Data &amp; Intelligence</span>
-          </button>
-          <div class="dd-divider"></div>
-          <button class="dditem" onclick="showPage('l2');closeDropdown()">
-            <span class="dditem-title">Decision &amp; Automation</span>
-          </button>
-          <div class="dd-divider"></div>
-          <button class="dditem" onclick="showPage('l3');closeDropdown()">
-            <span class="dditem-title">Channel &amp; Execution</span>
-          </button>
+      <div class="nav-dropdown" id="msDropdown">
+        <button class="nl nav-dd-btn" onclick="toggleDropdown()">Managed Services ▾</button>
+        <div class="nav-dd-menu" id="ddMenu">
+          <button class="nav-dd-item" onclick="showPage('l1');closeDD()">Layer 1: Data &amp; Intelligence</button>
+          <button class="nav-dd-item" onclick="showPage('l2');closeDD()">Layer 2: Decision &amp; Automation</button>
+          <button class="nav-dd-item" onclick="showPage('l3');closeDD()">Layer 3: Channel &amp; Execution</button>
         </div>
       </div>
       <button class="nl" onclick="showPage('businesses')">For Businesses</button>
       <button class="nl" onclick="showPage('agencies')">For Agencies</button>
       <button class="nl" onclick="showPage('technology')">Technology</button>
-      <button class="nl" onclick="showPage('sitemap')">Site Map</button>
+      <button class="nl" onclick="showPage('about')">About</button>
+      <button class="nl" onclick="showPage('faq')">FAQ</button>
     </div>
     <div class="nav-cta">
-      <button class="btn btn-out" style="font-size:12px" onclick="showPage('sitemap')">Site Map</button>
-      <button class="btn btn-gold" onclick="openDemoModal()">Book a Demo</button>
-      <button class="hamburger" id="hamburgerBtn" onclick="toggleMobileNav()" aria-label="Toggle navigation">
-        <span class="ham-line"></span>
-        <span class="ham-line"></span>
-        <span class="ham-line"></span>
-      </button>
+      <button class="btn btn-gold">Book a Demo</button>
     </div>
   </div>
   <div class="nav-prog" id="navProg"></div>
 </nav>
-
-<!-- ===== MOBILE NAV PANEL ===== -->
-<div class="mobile-nav" id="mobileNav">
-  <button class="mnl active" onclick="mobileNav('home')">Home</button>
-  <button class="mnl" onclick="mobileNav('platform')">Platform</button>
-  <div class="mob-section-label">Solutions</div>
-  <button class="mnl mob-indent" onclick="mobileNav('l1')">Layer 1 — Data &amp; Intelligence</button>
-  <button class="mnl mob-indent" onclick="mobileNav('l2')">Layer 2 — Decision &amp; Automation</button>
-  <button class="mnl mob-indent" onclick="mobileNav('l3')">Layer 3 — Channel &amp; Execution</button>
-  <div class="mob-divider"></div>
-  <button class="mnl" onclick="mobileNav('businesses')">For Businesses</button>
-  <button class="mnl" onclick="mobileNav('agencies')">For Agencies</button>
-  <button class="mnl" onclick="mobileNav('technology')">Technology</button>
-  <button class="mnl" onclick="mobileNav('sitemap')">Site Map</button>
-  <div class="mob-divider"></div>
-  <div class="mob-cta-row">
-    <button class="btn btn-gold" onclick="closeMobileNav();openDemoModal()">Book a Demo</button>
-  </div>
-</div>
-
-<!-- ===== DEMO MODAL ===== -->
-<div class="modal-overlay" id="demoModal" onclick="handleModalOverlayClick(event)">
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeDemoModal()" aria-label="Close">✕</button>
-    <div id="demoFormWrap">
-      <div class="modal-eyebrow">Get Started</div>
-      <div class="modal-title">Book a Demo</div>
-      <p class="modal-sub">See MIDAS in action. We'll walk you through all three layers and tailor the demo to your use case.</p>
-      <div class="form-field">
-        <label class="form-label" for="demoName">Full Name <span style="color:#DC2626">*</span></label>
-        <input class="form-input" type="text" id="demoName" placeholder="Your full name" required autocomplete="name">
-      </div>
-      <div class="form-field">
-        <label class="form-label" for="demoEmail">Work Email <span style="color:#DC2626">*</span></label>
-        <input class="form-input" type="email" id="demoEmail" placeholder="you@company.com" required autocomplete="email">
-      </div>
-      <div class="form-field">
-        <label class="form-label" for="demoMessage">Tell Us About Your Needs <span style="color:rgba(255,255,255,.28);font-size:8px;letter-spacing:1px">(OPTIONAL)</span></label>
-        <textarea class="form-textarea" id="demoMessage" placeholder="E.g. channels you run, team size, current tools, what you're trying to solve…"></textarea>
-      </div>
-      <button class="form-submit" id="demoSubmitBtn" onclick="submitDemoForm()">
-        <span id="demoSubmitLabel">Request My Demo →</span>
-      </button>
-      <div class="form-note">No spam. A real person from NettScience will reach out within one business day.</div>
-      <div id="demoFormError" style="display:none;margin-top:12px;background:rgba(220,38,38,.12);border:1px solid rgba(220,38,38,.25);border-radius:var(--r);padding:10px 14px;font-size:.82rem;color:#fca5a5;text-align:center"></div>
-    </div>
-    <div class="form-success" id="demoSuccess">
-      <div class="form-success-icon">✦</div>
-      <div class="form-success-title">You're on the list.</div>
-      <p class="form-success-msg">Thanks! Someone from the NettScience team will reach out to you within one business day to schedule your personalised MIDAS demo.</p>
-    </div>
-  </div>
-</div>
+<!-- ===================== HOME ===================== -->
 <div class="page active" id="page-home">
 <section class="hero">
   <div class="hero-bg"><div class="hgrid"></div><div class="orb orb-t"></div><div class="orb orb-g"></div></div>
@@ -281,7 +161,7 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
       <h1 class="htitle">Marketing Intelligence<br>that <span>Knows. Decides. Acts.</span></h1>
       <p class="hsub">MIDAS unifies all your marketing data, models it with AI, turns insights into approved actions, and executes them automatically — all three layers, live now.</p>
       <div class="hact">
-        <button class="btn btn-gold btn-lg" onclick="openDemoModal()">Book a Demo</button>
+        <button class="btn btn-gold btn-lg">Book a Demo</button>
         <button class="btn btn-out btn-lg" onclick="showPage('platform')">Explore the Platform</button>
       </div>
     </div>
@@ -293,10 +173,10 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
         <div><div class="snum">100%</div><div class="slbl">data sovereign</div></div>
       </div>
       <div class="fitems">
-        <div class="fitem"><span class="fnum">01</span><span class="ftext">All channels collected, unified &amp; modelled automatically</span><span class="farr">→</span></div>
-        <div class="fitem"><span class="fnum">02</span><span class="ftext">AI attributes, detects anomalies, scores leads, surfaces insights</span><span class="farr">→</span></div>
-        <div class="fitem"><span class="fnum">03</span><span class="ftext">AI recommends → you approve → system executes precisely</span><span class="farr">→</span></div>
-        <div class="fitem"><span class="fnum">04</span><span class="ftext">Trusted actions run autonomously within your defined limits</span><span class="farr">→</span></div>
+        <div class="fitem"><span class="fnum">01</span><span class="ftext">All channels unified — paid, organic, content, email, CRM</span><span class="farr">→</span></div>
+        <div class="fitem"><span class="fnum">02</span><span class="ftext">AI attributes, detects anomalies, scores leads, analyses content performance</span><span class="farr">→</span></div>
+        <div class="fitem"><span class="fnum">03</span><span class="ftext">AI recommends → you approve → system executes paid &amp; content actions</span><span class="farr">→</span></div>
+        <div class="fitem"><span class="fnum">04</span><span class="ftext">Trusted actions — media optimisation &amp; content scheduling — run autonomously</span><span class="farr">→</span></div>
       </div>
     </div>
   </div>
@@ -327,16 +207,18 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
         <div class="pi"><span class="px">✕</span><div><strong>Reactive decisions</strong> — problems found next morning in reports, budget already wasted</div></div>
         <div class="pi"><span class="px">✕</span><div><strong>Slow execution</strong> — hours between insight and action, across multiple platform logins</div></div>
         <div class="pi"><span class="px">✕</span><div><strong>No institutional memory</strong> — every decision starts from scratch, preferences live in people's heads</div></div>
+          <div class="pi"><span class="px">✕</span><div><strong>Content in the dark</strong> — no way to know which blog posts, social content, or downloads are actually generating revenue</div></div>
       </div></div>
       <div>
         <span class="eye eye-t">With MIDAS — All Three Layers</span>
         <h3 class="tn mb6 mt3">Unified intelligence. Human-approved action. Autonomous execution.</h3>
         <div class="plist">
-          <div class="si"><span class="sc">✓</span><div><strong>All channels unified</strong> — one model, one truth, updated every morning by 8am</div></div>
+          <div class="si"><span class="sc">✓</span><div><strong>All channels unified</strong> — one model, one truth, updated every morning</div></div>
           <div class="si"><span class="sc">✓</span><div><strong>True cross-channel attribution</strong> — what your marketing is actually doing, not what platforms claim</div></div>
           <div class="si"><span class="sc">✓</span><div><strong>Real-time anomaly alerts</strong> — AI monitors 24/7 and flags issues before they cost budget</div></div>
           <div class="si"><span class="sc">✓</span><div><strong>Structured recommendations</strong> — AI proposes, you approve, system executes precisely</div></div>
           <div class="si"><span class="sc">✓</span><div><strong>Autonomous execution</strong> — trusted action types run within your defined limits, continuously</div></div>
+          <div class="si"><span class="sc">✓</span><div><strong>Content intelligence</strong> — know which content assets generate pipeline, with attribution connecting every blog post to business outcomes</div></div>
         </div>
       </div>
     </div>
@@ -360,6 +242,7 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
           <li style="font-size:.8rem;color:var(--teal-light)">→ Daily dashboards &amp; anomaly alerts</li>
           <li style="font-size:.8rem;color:var(--teal-light)">→ True cross-channel attribution</li>
           <li style="font-size:.8rem;color:var(--teal-light)">→ Lead scoring to your CRM</li>
+          <li style="font-size:.8rem;color:var(--teal-light)">→ Content marketing intelligence</li>
         </ul>
         <button class="btn btn-teal" style="font-size:12px" onclick="showPage('l1')">Explore Layer 1 →</button>
       </div>
@@ -367,7 +250,7 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
         <div class="lbig">02</div>
         <span class="status s-live">Live Now</span>
         <h3 class="tw mb3">Decision &amp; Automation</h3>
-        <p style="color:rgba(255,255,255,.6);font-size:.87rem;line-height:1.62;margin-bottom:16px">AI diagnoses, recommends, and presents structured actions. You approve in Slack in 60 seconds. System executes precisely. AI learns from every decision.</p>
+        <p style="color:rgba(255,255,255,.6);font-size:.87rem;line-height:1.62;margin-bottom:16px">AI diagnoses, recommends, and presents structured actions. You approve quickly. System executes precisely. AI learns from every decision.</p>
         <ul style="display:flex;flex-direction:column;gap:5px;margin-bottom:18px">
           <li style="font-size:.8rem;color:var(--gold-light)">→ One-tap approvals in Slack</li>
           <li style="font-size:.8rem;color:var(--gold-light)">→ Exact execution of what you approved</li>
@@ -395,23 +278,23 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
   <div class="w">
     <div class="tc mb8"><span class="eye">Who It's For</span><h2 class="tn">Two audiences. One platform.</h2></div>
     <div class="tabs">
-      <div class="tab active" onclick="switchTab(this,'tab-smb')">For Businesses &amp; CMOs</div>
+      <div class="tab active" onclick="switchTab(this,'tab-smb')">For Businesses</div>
       <div class="tab" onclick="switchTab(this,'tab-agency')">For Digital Agencies</div>
     </div>
     <div id="tab-smb" class="panel active">
       <div>
-        <span class="eye eye-t">For CMOs &amp; Business Owners</span>
+        <span class="eye eye-t">For Businesses</span>
         <h3 class="tn mt3 mb4">From intelligence to autonomous action — with you in control.</h3>
         <p class="lead mb6">MIDAS delivers the full loop: intelligence every morning, AI-recommended actions for your approval, and autonomous execution of trusted actions — all as a managed service.</p>
         <div class="plist mb8">
           <div class="si"><span class="sc">✓</span><div>Know which channels actually drive your best customers</div></div>
-          <div class="si"><span class="sc">✓</span><div>Approve AI recommendations in Slack in 60 seconds</div></div>
+          <div class="si"><span class="sc">✓</span><div>Approve AI recommendations quickly in Slack</div></div>
           <div class="si"><span class="sc">✓</span><div>Trusted actions execute automatically within your defined limits</div></div>
         </div>
         <button class="btn btn-navy btn-lg" onclick="showPage('businesses')">For Businesses →</button>
       </div>
       <div style="background:var(--off);border-radius:var(--r-lg);padding:26px">
-        <div style="font-family:var(--f-m);font-size:10px;letter-spacing:2px;color:var(--mid);margin-bottom:12px;text-transform:uppercase">Your Slack approval — 60 seconds</div>
+        <div style="font-family:var(--f-m);font-size:10px;letter-spacing:2px;color:var(--mid);margin-bottom:12px;text-transform:uppercase">Your Slack Approval</div>
         <div class="rec-card">
           <div class="rec-header"><span style="color:var(--gold);font-size:11px;font-weight:700">⚡ Budget Recommendation · High Priority</span><span style="font-family:var(--f-m);font-size:9px;color:rgba(255,255,255,.4)">Expires 4h</span></div>
           <div class="rec-row"><span class="rec-lbl">Situation</span><span class="rec-val">Campaign X CPA: $52 vs $38 target (5-day avg)</span></div>
@@ -452,8 +335,8 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
     <span class="eye eye-d">Ready to start?</span>
     <h2 class="tw mt3">What would you like to do next?</h2>
     <div class="cta-opts">
-      <div class="copt" onclick="openDemoModal()"><div class="copt-l">For Businesses</div><div class="copt-t">Book a 30-min Demo</div><div class="copt-s">See all three layers on real data</div></div>
-      <div class="copt" onclick="openDemoModal()"><div class="copt-l">For Agencies</div><div class="copt-t">Partner Conversation</div><div class="copt-s">Explore the reseller programme</div></div>
+      <div class="copt"><div class="copt-l">For Businesses</div><div class="copt-t">Book a Demo</div><div class="copt-s">See all three layers on real data</div></div>
+      <div class="copt"><div class="copt-l">For Agencies</div><div class="copt-t">Partner Conversation</div><div class="copt-s">Explore the reseller programme</div></div>
       <div class="copt"><div class="copt-l">Download</div><div class="copt-t">Platform Brief PDF</div><div class="copt-s">Full three-layer capability overview</div></div>
       <div class="copt"><div class="copt-l">Technical</div><div class="copt-t">Architecture Deep Dive</div><div class="copt-s">Stack, security, infrastructure</div></div>
     </div>
@@ -488,7 +371,7 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
         <div class="loop-circle lc-teal">🧠</div>
         <div style="font-family:var(--f-m);font-size:9px;color:var(--teal-light);margin-bottom:5px;letter-spacing:1px">LAYER 1</div>
         <div style="font-family:var(--f-d);font-weight:700;color:var(--navy);margin-bottom:5px;font-size:.9rem">Reason &amp; Surface</div>
-        <div style="font-size:.78rem;color:var(--mid);line-height:1.5">AI explains anomalies, surfaces insights. Dashboards live by 8am. Alerts fire in real time.</div>
+        <div style="font-size:.78rem;color:var(--mid);line-height:1.5">AI explains paid anomalies, content performance gaps, and SEO opportunities. Dashboards live by 8am.</div>
       </div>
       <div class="loop-item">
         <div class="loop-circle lc-gold">💡</div>
@@ -500,7 +383,7 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
         <div class="loop-circle lc-gold">✅</div>
         <div style="font-family:var(--f-m);font-size:9px;color:var(--gold);margin-bottom:5px;letter-spacing:1px">LAYER 2</div>
         <div style="font-family:var(--f-d);font-weight:700;color:var(--navy);margin-bottom:5px;font-size:.9rem">Human Approves</div>
-        <div style="font-size:.78rem;color:var(--mid);line-height:1.5">You approve, reject, modify, or defer in Slack in 60 seconds. Nothing executes without your say.</div>
+        <div style="font-size:.78rem;color:var(--mid);line-height:1.5">You approve, reject, modify, or defer. Nothing executes without your say.</div>
       </div>
       <div class="loop-item">
         <div class="loop-circle lc-purple">⚡</div>
@@ -529,7 +412,7 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
         <tr><td><span class="cname">PostgreSQL</span></td><td><span class="cb cb-n">Warehouse</span></td><td>Central data warehouse and system of record. Raw data, modelled outputs, AI context, approval decisions, execution logs — all in one place. Row-level security for client isolation. pgvector for semantic AI memory.</td><td>Apple, Spotify, Instagram</td></tr>
         <tr><td><span class="cname">Ollama</span></td><td><span class="cb cb-g">Local AI</span></td><td>Runs open-source LLMs locally. Classification, embeddings, summaries, approval routing logic — no external data routing for these high-frequency tasks. Zero marginal cost at volume.</td><td>Enterprise AI deployments</td></tr>
         <tr><td><span class="cname">Apache Superset</span></td><td><span class="cb cb-t">Dashboards</span></td><td>Client-facing BI dashboards with role-based access. Serves Layer 1 intelligence, Layer 2 recommendation status, and Layer 3 execution reports — all from the same data source.</td><td>Airbnb, Lyft, Twitter</td></tr>
-        <tr><td><span class="cname">Nginx</span></td><td><span class="cb cb-n">Gateway</span></td><td>Secure reverse proxy. Sole external-facing component. SSL/HTTPS, rate limiting, IP access controls, routing to internal services. All other components sit behind it, invisible to the internet.</td><td>Netflix, NASA, WordPress.com</td></tr>
+        <tr><td><span class="cname">Caddy</span></td><td><span class="cb cb-n">Gateway</span></td><td>Secure, automatic HTTPS gateway. Sole external-facing component. Auto-provisions TLS certificates, handles rate limiting, IP access controls, and routing to internal services. All other components sit behind it, invisible to the internet.</td><td>Used in production deployments globally</td></tr>
       </tbody>
     </table>
   </div>
@@ -562,22 +445,28 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
       <span style="font-family:var(--f-m);font-size:11px;color:rgba(255,255,255,.4)">Layer 01 of 03</span>
     </div>
     <h1 class="tw mb4">Layer 1: Data &amp;<br><span class="tg">Intelligence</span></h1>
-    <p class="lead lead-w" style="max-width:640px">The intelligence foundation. Every channel unified, every model running, every insight surfaced — automatically, every morning before 8am. The layer everything else is built on.</p>
+    <p class="lead lead-w" style="max-width:640px;margin-bottom:28px">The intelligence foundation. Every channel unified, every model running, every insight surfaced — automatically, every morning before 8am. The layer everything else is built on.</p>
+    <div class="hact">
+      <button class="btn btn-gold btn-lg">Book a Demo</button>
+      <button class="btn btn-out btn-lg">Download Layer 1 Brief</button>
+    </div>
   </div>
 </section>
 <section class="sec">
   <div class="w">
     <div class="tc mb12">
-      <span class="eye">Six Capabilities</span>
+      <span class="eye">Seven Capabilities</span>
       <h2 class="tn">Everything you need to know what your marketing is doing.</h2>
+      <p class="lead mt4" style="max-width:680px;margin-left:auto;margin-right:auto">Paid media, organic content, email, SEO, CRM — Layer 1 unifies intelligence across every channel, including a dedicated content marketing intelligence module.</p>
     </div>
     <div class="g3">
-      <div class="card"><div class="ct ct-t"></div><div class="ib ib-t">📊</div><h4 class="tn mb3">Unified Data Collection</h4><p style="font-size:.86rem;color:var(--mid)">Google Ads, Meta, LinkedIn, GA4, HubSpot, Salesforce, email, SEO, e-commerce — one consistent model across every source, updated daily. Our orchestration engine (n8n) has 400+ native integrations.</p></div>
-      <div class="card"><div class="ct ct-t"></div><div class="ib ib-t">🔗</div><h4 class="tn mb3">Cross-Channel Attribution</h4><p style="font-size:.86rem;color:var(--mid)">Multi-touch attribution built across channels, not within them. Platform-reported vs. MIDAS-actual side-by-side. Know which channels actually drive your best customers — often dramatically different from what platforms claim.</p></div>
-      <div class="card"><div class="ct ct-t"></div><div class="ib ib-t">🔔</div><h4 class="tn mb3">AI Anomaly Detection</h4><p style="font-size:.86rem;color:var(--mid)">Continuous monitoring against statistical baselines. CPA spikes, budget pacing issues, creative fatigue, tracking failures — flagged the moment they emerge with plain-English diagnosis of likely cause.</p></div>
-      <div class="card"><div class="ct ct-g"></div><div class="ib ib-g">🧠</div><h4 class="tn mb3">Lead Scoring &amp; Segmentation</h4><p style="font-size:.86rem;color:var(--mid)">AI models trained on actual CRM deal outcomes. Lead scores written directly to HubSpot or Salesforce in real time. Segment membership updated continuously. Marketing intelligence becomes sales intelligence automatically.</p></div>
-      <div class="card"><div class="ct ct-g"></div><div class="ib ib-g">🔍</div><h4 class="tn mb3">Competitive Intelligence</h4><p style="font-size:.86rem;color:var(--mid)">Competitor search rankings, ad library activity, content publishing — monitored continuously. Significant movements surfaced proactively. Share-of-voice trends, keyword gaps, competitor budget signals.</p></div>
-      <div class="card"><div class="ct ct-n"></div><div class="ib ib-n">📈</div><h4 class="tn mb3">Intelligence Dashboards</h4><p style="font-size:.86rem;color:var(--mid)">Apache Superset dashboards refreshed daily. Executive KPI view, channel-level diagnostics, attribution breakdowns, data quality monitoring. Role-based access — each person sees the right level of detail.</p></div>
+      <div class="card"><div class="ct ct-t"></div><div class="ib ib-t">📊</div><h4 class="tn mb3">Unified Data Collection</h4><p style="font-size:.86rem;color:var(--mid)">Google Ads, Meta, LinkedIn, GA4, HubSpot, Salesforce, email, SEO, social — one consistent model across every source, updated daily. Our orchestration engine (n8n) has 400+ native integrations.</p></div>
+      <div class="card"><div class="ct ct-t"></div><div class="ib ib-t">🔗</div><h4 class="tn mb3">Cross-Channel Attribution</h4><p style="font-size:.86rem;color:var(--mid)">Multi-touch attribution built across all channels including content. Which blog posts, social series, and downloadable assets are actually driving revenue — not just traffic. Often dramatically different from what platforms claim.</p></div>
+      <div class="card"><div class="ct ct-t"></div><div class="ib ib-t">🔔</div><h4 class="tn mb3">AI Anomaly Detection</h4><p style="font-size:.86rem;color:var(--mid)">Continuous monitoring across paid and content channels. CPA spikes, budget pacing, creative fatigue, content engagement drops — flagged the moment they emerge with plain-English diagnosis.</p></div>
+      <div class="card"><div class="ct ct-g"></div><div class="ib ib-g">🧠</div><h4 class="tn mb3">Lead Scoring &amp; Segmentation</h4><p style="font-size:.86rem;color:var(--mid)">AI models trained on actual CRM deal outcomes. Lead scores written directly to HubSpot or Salesforce in real time — including which content assets each lead consumed on the path to conversion.</p></div>
+      <div class="card"><div class="ct ct-g"></div><div class="ib ib-g">✍️</div><h4 class="tn mb3">Content Marketing Intelligence</h4><p style="font-size:.86rem;color:var(--mid)">Which blog posts, social content, and downloadable assets are generating qualified leads? Content attribution connects every asset to business outcomes. Pillar balance monitoring, SEO gap analysis, competitor content tracking, and optimal posting time signals — in one unified view.</p></div>
+      <div class="card"><div class="ct ct-g"></div><div class="ib ib-g">🔍</div><h4 class="tn mb3">Competitive Intelligence</h4><p style="font-size:.86rem;color:var(--mid)">Competitor search rankings, ad activity, and content publishing monitored continuously. Share-of-voice trends, keyword gaps, topic gaps, competitor content performance — surfaced proactively.</p></div>
+      <div class="card"><div class="ct ct-n"></div><div class="ib ib-n">📈</div><h4 class="tn mb3">Intelligence Dashboards</h4><p style="font-size:.86rem;color:var(--mid)">Apache Superset dashboards refreshed daily. Paid performance, content performance, attribution, lead scoring — unified in one role-based view. Each person sees exactly the level of detail they need.</p></div>
     </div>
   </div>
 </section>
@@ -588,7 +477,7 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
         <span class="eye">Onboarding</span>
         <h2 class="tn mt3 mb4">From zero to intelligence in 12 weeks.</h2>
         <div class="ophases">
-          <div class="phase"><div class="plabel" style="color:var(--teal)">Wks 1–4</div><div><strong class="tn">Foundation</strong><p style="font-size:.84rem;color:var(--mid);margin-top:3px">Google Ads, GA4, Search Console connected. First dashboards live. Paid &amp; organic intelligence active.</p></div></div>
+          <div class="phase"><div class="plabel" style="color:var(--teal-dark,#0A5F6A)">Wks 1–4</div><div><strong class="tn">Foundation</strong><p style="font-size:.84rem;color:var(--mid);margin-top:3px">Google Ads, GA4, Search Console connected. First dashboards live. Paid &amp; organic intelligence active.</p></div></div>
           <div class="phase"><div class="plabel" style="color:var(--navy)">Wks 5–8</div><div><strong class="tn">Attribution</strong><p style="font-size:.84rem;color:var(--mid);margin-top:3px">Meta Ads &amp; CRM connected. Cross-channel attribution active. Lead scoring operational.</p></div></div>
           <div class="phase"><div class="plabel" style="color:var(--gold)">Wks 9–12</div><div><strong class="tn">Full Intelligence</strong><p style="font-size:.84rem;color:var(--mid);margin-top:3px">Email, competitive intelligence, content performance. Full channel coverage at full depth.</p></div></div>
           <div class="phase" style="border-left:2px dashed var(--light)"><div class="plabel" style="color:var(--mid)">Month 4+</div><div><strong class="tn">Layer 2 Ready</strong><p style="font-size:.84rem;color:var(--mid);margin-top:3px">Intelligence baselines established. AI preference profile begins. Ready to activate Layer 2 decision automation.</p></div></div>
@@ -604,7 +493,7 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
     </div>
   </div>
 </section>
-<div class="cta-band"><div class="w" style="position:relative;text-align:center"><h2 class="tw">Your intelligence foundation. Ready to add decision automation?</h2><p class="lead lead-w mt4" style="max-width:520px;margin:12px auto 26px">Layer 1 gives you the intelligence. Layer 2 turns it into approved action.</p><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><button class="btn btn-gold btn-xl" onclick="openDemoModal()">Book a Demo</button><button class="btn btn-out btn-lg" onclick="showPage('l2')">Explore Layer 2 →</button></div></div></div>
+<div class="cta-band"><div class="w" style="position:relative;text-align:center"><h2 class="tw">Your intelligence foundation. Ready to add decision automation?</h2><p class="lead lead-w mt4" style="max-width:520px;margin:12px auto 26px">Layer 1 gives you the intelligence. Layer 2 turns it into approved action.</p><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><button class="btn btn-gold btn-xl">Book a Demo</button><button class="btn btn-out btn-lg" onclick="showPage('l2')">Explore Layer 2 →</button></div></div></div>
 </div>
 
 <!-- ===================== LAYER 2 ===================== -->
@@ -617,9 +506,9 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
       <span style="font-family:var(--f-m);font-size:11px;color:rgba(255,255,255,.4)">Layer 02 of 03</span>
     </div>
     <h1 class="tw mb4">Layer 2: Decision &amp;<br><span class="tg">Automation</span></h1>
-    <p class="lead lead-w" style="max-width:660px">Intelligence becomes action. AI identifies what should change, drafts a structured recommendation with full reasoning, and presents it for your approval. You decide in 60 seconds. The system executes exactly what you approved.</p>
+    <p class="lead lead-w" style="max-width:660px">Intelligence becomes action. AI identifies what should change, drafts a structured recommendation with full reasoning, and presents it for your approval. The system executes exactly what you approved.</p>
     <div class="hact mt8">
-      <button class="btn btn-gold btn-lg" onclick="openDemoModal()">Book a Demo</button>
+      <button class="btn btn-gold btn-lg">Book a Demo</button>
       <button class="btn btn-out btn-lg">Download Layer 2 Brief</button>
     </div>
   </div>
@@ -633,7 +522,7 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
     <div class="g3" style="gap:16px">
       <div class="card"><div class="ct ct-t"></div><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div style="width:30px;height:30px;border-radius:50%;background:var(--teal);color:var(--white);display:flex;align-items:center;justify-content:center;font-family:var(--f-d);font-weight:800;font-size:13px;flex-shrink:0">1</div><h4 class="tn">Detect</h4></div><p style="font-size:.85rem;color:var(--mid)">Continuous monitoring spots a CPA problem, budget pacing issue, or opportunity the moment it emerges — not the next morning in a report.</p></div>
       <div class="card"><div class="ct ct-t"></div><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div style="width:30px;height:30px;border-radius:50%;background:var(--teal);color:var(--white);display:flex;align-items:center;justify-content:center;font-family:var(--f-d);font-weight:800;font-size:13px;flex-shrink:0">2</div><h4 class="tn">Reason</h4></div><p style="font-size:.85rem;color:var(--mid)">AI diagnoses the cause and drafts a specific recommendation — the situation, the reasoning, the proposed action, the expected outcome, and the confidence level.</p></div>
-      <div class="card"><div class="ct ct-g"></div><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div style="width:30px;height:30px;border-radius:50%;background:var(--gold);color:var(--navy-deep);display:flex;align-items:center;justify-content:center;font-family:var(--f-d);font-weight:800;font-size:13px;flex-shrink:0">3</div><h4 class="tn">Present</h4></div><p style="font-size:.85rem;color:var(--mid)">Structured recommendation delivered to the right approval channel — Slack for operational decisions (2hr target), Notion for strategic ones (24-48hr review cycle).</p></div>
+      <div class="card"><div class="ct ct-g"></div><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div style="width:30px;height:30px;border-radius:50%;background:var(--gold);color:var(--navy-deep);display:flex;align-items:center;justify-content:center;font-family:var(--f-d);font-weight:800;font-size:13px;flex-shrink:0">3</div><h4 class="tn">Present</h4></div><p style="font-size:.85rem;color:var(--mid)">Structured recommendation delivered to the right approval channel — Slack for operational decisions (2hr target), Notion for strategic ones (24-48hr review cycle). Covers both paid media and content decisions.</p></div>
       <div class="card"><div class="ct ct-g"></div><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div style="width:30px;height:30px;border-radius:50%;background:var(--gold);color:var(--navy-deep);display:flex;align-items:center;justify-content:center;font-family:var(--f-d);font-weight:800;font-size:13px;flex-shrink:0">4</div><h4 class="tn">Decide</h4></div><p style="font-size:.85rem;color:var(--mid)">Four options: Approve, Reject, Modify, or Defer. Nothing executes without your say. The Modify option teaches the AI your preferred scale and style.</p></div>
       <div class="card"><div class="ct ct-n"></div><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div style="width:30px;height:30px;border-radius:50%;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;font-family:var(--f-d);font-weight:800;font-size:13px;flex-shrink:0">5</div><h4 class="tn">Execute</h4></div><p style="font-size:.85rem;color:var(--mid)">Approved actions execute precisely — budget adjusted, lead scored, content scheduled. Every execution includes pre-validation, spend cap checks, and full logging.</p></div>
       <div class="card"><div class="ct ct-n"></div><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div style="width:30px;height:30px;border-radius:50%;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;font-family:var(--f-d);font-weight:800;font-size:13px;flex-shrink:0">6</div><h4 class="tn">Measure</h4></div><p style="font-size:.85rem;color:var(--mid)">Outcomes tracked against predicted results 48-72 hours later. What worked improves the next recommendation. A growing library of evidence that the service actually delivers.</p></div>
@@ -676,7 +565,7 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
               <div class="rbtn rb-grey">⏱ Defer</div>
             </div>
           </div>
-          <div style="margin-top:12px;font-size:11px;color:rgba(255,255,255,.3);font-style:italic;text-align:center">Everything you need. Decide in 60 seconds. From any device.</div>
+          <div style="margin-top:12px;font-size:11px;color:rgba(255,255,255,.3);font-style:italic;text-align:center">Everything you need. From any device.</div>
         </div>
         <div style="margin-top:16px;background:var(--navy-deep);border-radius:var(--r-lg);padding:20px">
           <div style="font-family:var(--f-m);font-size:10px;color:var(--gold);margin-bottom:10px;letter-spacing:1.5px">AI THAT LEARNS — APPROVAL RATE OVER TIME</div>
@@ -694,7 +583,43 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
     </div>
   </div>
 </section>
-<div class="cta-band"><div class="w" style="position:relative;text-align:center"><h2 class="tw">Decision automation live. Ready for autonomous execution?</h2><p class="lead lead-w mt4" style="max-width:520px;margin:12px auto 26px">Layer 2 gives you approved action. Layer 3 closes the full loop.</p><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><button class="btn btn-gold btn-xl" onclick="openDemoModal()">Book a Demo</button><button class="btn btn-out btn-lg" onclick="showPage('l3')">Explore Layer 3 →</button></div></div></div>
+<section class="sec">
+  <div class="w">
+    <span class="eye">Content Marketing Recommendations</span>
+    <h2 class="tn mt3 mb4">Layer 2 works for content decisions — not just paid media.</h2>
+    <p class="lead mb8" style="max-width:700px">The same six-component recommendation structure (situation / diagnosis / action / expected outcome / confidence / expiry) applies to content marketing. AI identifies what your content strategy should change — you approve in Notion, system executes.</p>
+    <div class="g3">
+      <div class="card"><div class="ct ct-t"></div>
+        <div style="font-family:var(--f-m);font-size:9px;letter-spacing:1.5px;color:var(--teal);margin-bottom:8px;text-transform:uppercase">Example Recommendation</div>
+        <h4 class="tn mb3">Content Pillar Rebalancing</h4>
+        <p style="font-size:.86rem;color:var(--mid);margin-bottom:10px">AI detects that educational content is 18% of your published mix vs. a 35% target, while promotional content is over-represented. Recommendation: shift the next 3 scheduled posts to educational format.</p>
+        <div style="background:var(--off);border-radius:6px;padding:12px;font-size:.8rem;color:var(--dark)">
+          <div style="font-family:var(--f-m);font-size:9px;color:var(--mid);margin-bottom:6px">SITUATION → DIAGNOSIS → ACTION → EXPECTED OUTCOME</div>
+          <div>"Educational pillar at 18% vs. 35% target (90-day avg) → Promotional content crowding out organic reach drivers → Schedule 3 educational posts in next 2 weeks → Projected +22% organic reach based on last 6 months of pillar data."</div>
+        </div>
+      </div>
+      <div class="card"><div class="ct ct-g"></div>
+        <div style="font-family:var(--f-m);font-size:9px;letter-spacing:1.5px;color:var(--gold);margin-bottom:8px;text-transform:uppercase">Example Recommendation</div>
+        <h4 class="tn mb3">SEO Content Gap Opportunity</h4>
+        <p style="font-size:.86rem;color:var(--mid);margin-bottom:10px">AI detects a keyword your competitor ranks in position 3 for, that you have no content targeting. Estimated search volume and difficulty supports a recommendation to create a targeted blog post.</p>
+        <div style="background:var(--off);border-radius:6px;padding:12px;font-size:.8rem;color:var(--dark)">
+          <div style="font-family:var(--f-m);font-size:9px;color:var(--mid);margin-bottom:6px">SITUATION → DIAGNOSIS → ACTION → EXPECTED OUTCOME</div>
+          <div>"Competitor ranks #3 for 'marketing attribution India' (1,200 searches/mo) → You have no page targeting this term → Publish a 1,500-word guide → Projected top-10 ranking within 90 days based on domain authority."</div>
+        </div>
+      </div>
+      <div class="card"><div class="ct ct-n"></div>
+        <div style="font-family:var(--f-m);font-size:9px;letter-spacing:1.5px;color:var(--navy);margin-bottom:8px;text-transform:uppercase">Example Recommendation</div>
+        <h4 class="tn mb3">Posting Schedule Optimisation</h4>
+        <p style="font-size:.86rem;color:var(--mid);margin-bottom:10px">AI detects that your LinkedIn audience engagement peak has shifted from 9am to 7pm over the past 30 days. Current posting schedule is misaligned. Recommendation: update schedule to match actual audience behaviour.</p>
+        <div style="background:var(--off);border-radius:6px;padding:12px;font-size:.8rem;color:var(--dark)">
+          <div style="font-family:var(--f-m);font-size:9px;color:var(--mid);margin-bottom:6px">SITUATION → DIAGNOSIS → ACTION → EXPECTED OUTCOME</div>
+          <div>"Avg engagement at 7pm = 3.4× higher than 9am slot (last 30 days) → Audience behaviour shift detected → Reschedule queued posts to 7pm → Projected +40% reach on next 5 posts."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="cta-band"><div class="w" style="position:relative;text-align:center"><h2 class="tw">Decision automation live. Ready for autonomous execution?</h2><p class="lead lead-w mt4" style="max-width:520px;margin:12px auto 26px">Layer 2 gives you approved action — for both paid media and content. Layer 3 closes the full loop.</p><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><button class="btn btn-gold btn-xl">Book a Demo</button><button class="btn btn-out btn-lg" onclick="showPage('l3')">Explore Layer 3 →</button></div></div></div>
 </div>
 <!-- ===================== LAYER 3 ===================== -->
 <div class="page" id="page-l3">
@@ -708,7 +633,7 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
     <h1 class="tw mb4">Layer 3: Channel<br><span style="color:#A78BFA">Execution</span></h1>
     <p class="lead lead-w" style="max-width:660px">The full loop — closed. For action types where your preferences are fully calibrated through Layer 2, execution becomes autonomous within the limits you define. You stay in control of every boundary. The system works within them — continuously, precisely, without delay.</p>
     <div class="hact mt8">
-      <button class="btn btn-gold btn-lg" onclick="openDemoModal()">Book a Demo</button>
+      <button class="btn btn-gold btn-lg">Book a Demo</button>
       <button class="btn btn-out btn-lg">Download Layer 3 Brief</button>
     </div>
   </div>
@@ -723,28 +648,28 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
     </div>
     <div class="exec-flow">
       <div class="ef-item ef1">
-        <div class="ef-num" style="color:var(--teal)">01</div>
-        <div class="ef-label" style="color:var(--white)">Preference Calibrated</div>
+        <div class="ef-num" style="color:var(--navy)">01</div>
+        <div class="ef-label" style="color:var(--navy)">Preference Calibrated</div>
         <div class="ef-desc">Through months of Layer 2 approvals, the system has learned your exact thresholds, preferred magnitudes, and timing constraints for each action type.</div>
       </div>
       <div class="ef-item ef2">
-        <div class="ef-num" style="color:#60A5FA">02</div>
-        <div class="ef-label" style="color:var(--white)">Rule Defined</div>
+        <div class="ef-num" style="color:var(--navy)">02</div>
+        <div class="ef-label" style="color:var(--navy)">Rule Defined</div>
         <div class="ef-desc">You set explicit autonomy boundaries — max budget change %, spend cap, channels included, days of week permitted, override triggers.</div>
       </div>
       <div class="ef-item ef3">
-        <div class="ef-num" style="color:var(--gold)">03</div>
-        <div class="ef-label" style="color:var(--white)">Validated &amp; Safe</div>
+        <div class="ef-num" style="color:var(--navy)">03</div>
+        <div class="ef-label" style="color:var(--navy)">Validated &amp; Safe</div>
         <div class="ef-desc">Before every action: pre-execution validation checks current state matches expected state. Spend caps enforced. Idempotency check prevents duplicates.</div>
       </div>
       <div class="ef-item ef4">
-        <div class="ef-num" style="color:#A78BFA">04</div>
-        <div class="ef-label" style="color:var(--white)">Executes Autonomously</div>
+        <div class="ef-num" style="color:var(--navy)">04</div>
+        <div class="ef-label" style="color:var(--navy)">Executes Autonomously</div>
         <div class="ef-desc">Action executes in the connected platform — budget adjusted, creative paused, audience updated, lead scored — without waiting for manual approval.</div>
       </div>
       <div class="ef-item ef5">
-        <div class="ef-num" style="color:#34D399">05</div>
-        <div class="ef-label" style="color:var(--white)">Logged &amp; Reported</div>
+        <div class="ef-num" style="color:var(--navy)">05</div>
+        <div class="ef-label" style="color:var(--navy)">Logged &amp; Reported</div>
         <div class="ef-desc">Every autonomous action is logged with full context. You receive a digest of what was done. Outcome measured 48-72hrs later against predicted result.</div>
       </div>
     </div>
@@ -770,13 +695,13 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
       </div>
       <div class="ch-card" style="background:rgba(27,58,107,.08);border-color:rgba(27,58,107,.2)">
         <div class="ch-icon">📅</div>
-        <div class="ch-name" style="color:var(--navy)">Content Scheduling</div>
-        <div class="ch-desc" style="color:var(--mid)">Approved creative recommendations execute into scheduling tools — right channel, right time, right audience. Human-approved strategy becomes an automated, trackable action.</div>
+        <div class="ch-name" style="color:var(--navy)">Content Scheduling &amp; Publishing</div>
+        <div class="ch-desc" style="color:var(--mid)">AI-drafted content briefs → human approval → autonomous publishing at optimised times. Blog posts, social content, email campaigns — scheduled and published within your defined limits. Performance data feeds back to improve the next brief.</div>
       </div>
       <div class="ch-card" style="background:rgba(124,58,237,.08);border-color:rgba(124,58,237,.2)">
         <div class="ch-icon">📊</div>
         <div class="ch-name" style="color:var(--navy)">Automated Reporting</div>
-        <div class="ch-desc" style="color:var(--mid)">AI-synthesised performance reports reviewed by your team and delivered to clients automatically — weekly, monthly, on schedule. AI synthesises; your team adds judgment; system delivers.</div>
+        <div class="ch-desc" style="color:var(--mid)">AI-synthesised reports covering both paid performance and content performance — delivered automatically on schedule. Which content assets drove leads, which blog posts generated pipeline, which social content converted. AI synthesises; your team adds judgment; system delivers.</div>
       </div>
       <div class="ch-card" style="background:rgba(16,185,129,.08);border-color:rgba(16,185,129,.2)">
         <div class="ch-icon">🔔</div>
@@ -792,6 +717,27 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
   </div>
 </section>
 
+<section class="sec sec-off">
+  <div class="w">
+    <span class="eye">Content Intelligence Loop</span>
+    <h2 class="tn mt3 mb4">Content that gets smarter every month.</h2>
+    <p class="lead mb8" style="max-width:700px">Every piece of content published through Layer 3 generates performance data that flows back into the next content brief. Over time, your content strategy is shaped by evidence — not assumptions.</p>
+    <div class="g3">
+      <div class="card"><div class="ct ct-t"></div><div class="ib ib-t">🎯</div>
+        <h4 class="tn mb3">Brief Generation from Performance History</h4>
+        <p style="font-size:.86rem;color:var(--mid)">When AI drafts a content brief, it queries the performance history of every previous brief with similar parameters — topic, format, pillar, tone. The brief is informed by what has actually worked for this client, not generic best practice.</p>
+      </div>
+      <div class="card"><div class="ct ct-g"></div><div class="ib ib-g">📐</div>
+        <h4 class="tn mb3">Format & Pillar Optimisation</h4>
+        <p style="font-size:.86rem;color:var(--mid)">The system tracks which content formats (case study, how-to, opinion, data piece) and which pillars (educational, promotional, community) are generating the best business outcomes for each client — and weights future content recommendations accordingly.</p>
+      </div>
+      <div class="card"><div class="ct ct-n"></div><div class="ib ib-n">🔁</div>
+        <h4 class="tn mb3">Cross-Channel Content Amplification</h4>
+        <p style="font-size:.86rem;color:var(--mid)">When a blog post performs above its baseline in organic search, Layer 3 automatically recommends (or in autonomous mode, creates) a social series adapting its key points. High-performing content compounds — it does not stop working after it is published.</p>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="sec sec-dark">
   <div class="w">
     <div class="g2" style="gap:48px;align-items:start">
@@ -835,7 +781,7 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
     <h2 class="tw">The full loop. Intelligence that knows. Decisions that act. Execution that delivers.</h2>
     <p class="lead lead-w mt4" style="max-width:560px;margin:12px auto 26px">MIDAS is the only fully integrated intelligence-to-execution system built for marketing teams that want to stay in control while moving at AI speed.</p>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-      <button class="btn btn-gold btn-xl" onclick="openDemoModal()">Book a Demo</button>
+      <button class="btn btn-gold btn-xl">Book a Demo</button>
       <button class="btn btn-out btn-lg" onclick="showPage('platform')">See All Three Layers</button>
     </div>
   </div>
@@ -848,10 +794,10 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
 <section class="hero" style="min-height:62vh">
   <div class="hero-bg"><div class="hgrid"></div><div class="orb orb-t"></div></div>
   <div class="w" style="position:relative">
-    <span class="eye">For CMOs &amp; Business Owners</span>
+    <span class="eye">For Businesses</span>
     <h1 class="htitle mt3 mb4">Intelligence. Action. Results.<br><span>All three layers. Fully managed.</span></h1>
     <p class="lead lead-w" style="max-width:560px;margin-bottom:26px">MIDAS gives you the complete loop — from unified intelligence to autonomous action — as a fully managed service. No data scientists. No infrastructure. No platform logins.</p>
-    <div class="hact"><button class="btn btn-gold btn-lg" onclick="openDemoModal()">Book a 30-Minute Demo</button><button class="btn btn-out btn-lg">Download the Client Brief</button></div>
+    <div class="hact"><button class="btn btn-gold btn-lg">Book a Demo</button><button class="btn btn-out btn-lg">Download the Client Brief</button></div>
   </div>
 </section>
 <section class="sec">
@@ -859,7 +805,7 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
     <div class="tc mb12"><span class="eye">The Complete Service</span><h2 class="tn">What you get across all three layers.</h2></div>
     <div class="g3">
       <div class="card"><div class="ct ct-t"></div><div style="font-family:var(--f-m);font-size:9px;letter-spacing:1.5px;color:var(--teal);margin-bottom:8px">LAYER 1</div><h4 class="tn mb3">Unified Intelligence</h4><p style="font-size:.86rem;color:var(--mid)">Every channel in one view by 8am. True cross-channel attribution. AI anomaly alerts in real time. Lead scoring to your CRM. Competitive intelligence. Plain-English insight summaries.</p></div>
-      <div class="card"><div class="ct ct-g"></div><div style="font-family:var(--f-m);font-size:9px;letter-spacing:1.5px;color:var(--gold);margin-bottom:8px">LAYER 2</div><h4 class="tn mb3">Human-Approved Action</h4><p style="font-size:.86rem;color:var(--mid)">AI diagnoses, recommends with full reasoning, and presents for your approval. Approve in Slack in 60 seconds. System executes exactly what you approved. AI learns from every decision.</p></div>
+      <div class="card"><div class="ct ct-g"></div><div style="font-family:var(--f-m);font-size:9px;letter-spacing:1.5px;color:var(--gold);margin-bottom:8px">LAYER 2</div><h4 class="tn mb3">Human-Approved Action</h4><p style="font-size:.86rem;color:var(--mid)">AI diagnoses, recommends with full reasoning, and presents for your approval. Approve quickly. System executes exactly what you approved. AI learns from every decision.</p></div>
       <div class="card"><div class="ct ct-p"></div><div style="font-family:var(--f-m);font-size:9px;letter-spacing:1.5px;color:#7C3AED;margin-bottom:8px">LAYER 3</div><h4 class="tn mb3">Autonomous Execution</h4><p style="font-size:.86rem;color:var(--mid)">For trusted action types, execution runs autonomously within limits you define. Budgets adjusted, leads scored, content scheduled — continuously, without delay. Every action logged and reported.</p></div>
       <div class="card"><div class="ct ct-t"></div><h4 class="tn mb3">Your data stays yours.</h4><p style="font-size:.86rem;color:var(--mid)">Local AI inference for routine tasks — no data leaves your environment. Full client data isolation at database level. Immutable audit trail of every action. Data residency options available.</p></div>
       <div class="card"><div class="ct ct-g"></div><h4 class="tn mb3">Revenue-connected intelligence.</h4><p style="font-size:.86rem;color:var(--mid)">Lead scoring calibrated on actual CRM deal outcomes. Attribution connected to revenue, not just conversions. Budget decisions based on which channels produce your highest-value customers.</p></div>
@@ -874,7 +820,7 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
         <span class="eye">Getting Started</span>
         <h2 class="tn mt3 mb4">From zero to autonomous marketing operations.</h2>
         <div class="ophases">
-          <div class="phase"><div class="plabel" style="color:var(--teal)">Wks 1–12</div><div><strong class="tn">Layer 1: Intelligence</strong><p style="font-size:.83rem;color:var(--mid);margin-top:3px">All channels connected. Dashboards live. Attribution, anomaly detection, lead scoring fully operational.</p></div></div>
+          <div class="phase"><div class="plabel" style="color:var(--teal-dark,#0A5F6A)">Wks 1–12</div><div><strong class="tn">Layer 1: Intelligence</strong><p style="font-size:.83rem;color:var(--mid);margin-top:3px">All channels connected. Dashboards live. Attribution, anomaly detection, lead scoring fully operational.</p></div></div>
           <div class="phase"><div class="plabel" style="color:var(--gold)">Mo 3–6</div><div><strong class="tn">Layer 2: Decisions</strong><p style="font-size:.83rem;color:var(--mid);margin-top:3px">AI recommendations begin flowing. Approval channels configured. Preference profile starts accumulating from your first decision.</p></div></div>
           <div class="phase"><div class="plabel" style="color:#7C3AED">Mo 6–12</div><div><strong class="tn">Layer 3: Execution</strong><p style="font-size:.83rem;color:var(--mid);margin-top:3px">For action types with mature preference calibration, autonomous execution activates within your defined limits.</p></div></div>
           <div class="phase" style="border-left:2px dashed var(--light)"><div class="plabel" style="color:var(--mid)">Year 2+</div><div><strong class="tn">Compounding Value</strong><p style="font-size:.83rem;color:var(--mid);margin-top:3px">80%+ approval rate. Deep institutional knowledge. Autonomous execution across all trusted action types. Intelligence that genuinely thinks like you.</p></div></div>
@@ -890,7 +836,7 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
     </div>
   </div>
 </section>
-<div class="cta-band"><div class="w" style="position:relative;text-align:center"><h2 class="tw">How much faster could your marketing improve if every insight triggered a specific, reasoned action — within minutes, not days?</h2><p class="lead lead-w mt4" style="max-width:520px;margin:12px auto 26px">That is what MIDAS delivers across all three layers — fully managed, fully controlled by you.</p><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><button class="btn btn-gold btn-xl" onclick="openDemoModal()">Book a 30-Minute Demo</button><button class="btn btn-out btn-lg">Download the Client Brief</button></div></div></div>
+<div class="cta-band"><div class="w" style="position:relative;text-align:center"><h2 class="tw">How much faster could your marketing improve if every insight triggered a specific, reasoned action — within minutes, not days?</h2><p class="lead lead-w mt4" style="max-width:520px;margin:12px auto 26px">That is what MIDAS delivers across all three layers — fully managed, fully controlled by you.</p><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><button class="btn btn-gold btn-xl">Book a Demo</button><button class="btn btn-out btn-lg">Download the Client Brief</button></div></div></div>
 </div>
 
 <!-- ===================== FOR AGENCIES ===================== -->
@@ -902,15 +848,15 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
     <span class="eye">Agency &amp; Reseller Partner Programme</span>
     <h1 class="htitle mt3 mb4">The deepest client stickiness<br><span>in the market.</span></h1>
     <p class="lead lead-w" style="max-width:560px;margin-bottom:26px">White-label the complete three-layer MIDAS stack under your brand. Intelligence. Decision automation. Autonomous execution. Every client decision builds a preference moat no competitor can replicate without starting from scratch.</p>
-    <div class="hact"><button class="btn btn-gold btn-lg" onclick="openDemoModal()">Request a Partner Conversation</button><button class="btn btn-out btn-lg">Download the Agency Brief</button></div>
+    <div class="hact"><button class="btn btn-gold btn-lg">Request a Partner Conversation</button><button class="btn btn-out btn-lg">Download the Agency Brief</button></div>
   </div>
 </section>
 <section class="sec">
   <div class="w">
     <div class="tc mb12"><span class="eye">The Full Three-Layer Stack — White-Labelled</span><h2 class="tn">What your agency delivers to clients.</h2></div>
     <div class="g3">
-      <div class="card"><div class="ct ct-t"></div><div style="font-family:var(--f-m);font-size:9px;letter-spacing:1.5px;color:var(--teal);margin-bottom:8px">LAYER 1 — YOUR BRAND</div><h4 class="tn mb3">Intelligence Dashboards</h4><p style="font-size:.86rem;color:var(--mid)">Unified data from 15+ channels. Attribution, anomaly detection, lead scoring, competitive intelligence. All under your agency brand — MIDAS is invisible to your clients.</p></div>
-      <div class="card"><div class="ct ct-g"></div><div style="font-family:var(--f-m);font-size:9px;letter-spacing:1.5px;color:var(--gold);margin-bottom:8px">LAYER 2 — YOUR BRAND</div><h4 class="tn mb3">Decision Automation</h4><p style="font-size:.86rem;color:var(--mid)">Your branded Slack messages. Your Notion workspace. Your clients approve AI recommendations in 60 seconds. Your agency's name is on every recommendation, every execution confirmation.</p></div>
+      <div class="card"><div class="ct ct-t"></div><div style="font-family:var(--f-m);font-size:9px;letter-spacing:1.5px;color:var(--teal);margin-bottom:8px">LAYER 1 — YOUR BRAND</div><h4 class="tn mb3">Intelligence Dashboards</h4><p style="font-size:.86rem;color:var(--mid)">Unified data from 15+ channels — paid, organic, content, email, CRM. Attribution across all channels including content assets. Lead scoring, anomaly detection, content pillar analysis, competitive intelligence. All under your agency brand — MIDAS is invisible to your clients.</p></div>
+      <div class="card"><div class="ct ct-g"></div><div style="font-family:var(--f-m);font-size:9px;letter-spacing:1.5px;color:var(--gold);margin-bottom:8px">LAYER 2 — YOUR BRAND</div><h4 class="tn mb3">Decision Automation</h4><p style="font-size:.86rem;color:var(--mid)">Your branded Slack and Notion workspace. Clients approve AI recommendations — paid media and content strategy. Your agency's name on every recommendation, whether a budget shift or a content pillar rebalancing.</p></div>
       <div class="card"><div class="ct ct-p"></div><div style="font-family:var(--f-m);font-size:9px;letter-spacing:1.5px;color:#7C3AED;margin-bottom:8px">LAYER 3 — YOUR BRAND</div><h4 class="tn mb3">Autonomous Execution</h4><p style="font-size:.86rem;color:var(--mid)">For clients with mature preference profiles, autonomous execution within defined limits runs continuously under your service umbrella. Daily digests and execution reports carry your brand.</p></div>
       <div class="card"><div class="ct ct-n"></div><h4 class="tn mb3">30–50% Recurring Margin</h4><p style="font-size:.86rem;color:var(--mid)">New monthly revenue layered on existing billing. Layer 1 analytics tier. Layer 2 automation tier. Layer 3 autonomous execution tier. Each layer adds incremental recurring revenue per client.</p></div>
       <div class="card"><div class="ct ct-t"></div><h4 class="tn mb3">The Preference Moat</h4><p style="font-size:.86rem;color:var(--mid)">After 12 months, your client's preference profile — 25-40 calibrated preferences, accumulated outcome history, semantic content library — belongs to your engagement. A competitor starting fresh cannot replicate it.</p></div>
@@ -967,7 +913,7 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
     </div>
   </div>
 </section>
-<div class="cta-band"><div class="w" style="position:relative;text-align:center"><h2 class="tw">What would showing a client their 85% approval rate at month 12 do to your renewal conversation?</h2><p class="lead lead-w mt4" style="max-width:520px;margin:12px auto 26px">Three steps: Partner Call → Live Demonstration → First Client Pilot.</p><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><button class="btn btn-gold btn-xl" onclick="openDemoModal()">Request a Partner Conversation</button><button class="btn btn-out btn-lg">Download Agency Brief</button></div></div></div>
+<div class="cta-band"><div class="w" style="position:relative;text-align:center"><h2 class="tw">What would showing a client their 85% approval rate at month 12 do to your renewal conversation?</h2><p class="lead lead-w mt4" style="max-width:520px;margin:12px auto 26px">Three steps: Partner Call → Live Demonstration → First Client Pilot.</p><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><button class="btn btn-gold btn-xl">Request a Partner Conversation</button><button class="btn btn-out btn-lg">Download Agency Brief</button></div></div></div>
 </div>
 
 <!-- ===================== TECHNOLOGY ===================== -->
@@ -1014,7 +960,7 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
         <p style="color:rgba(255,255,255,.62);margin-bottom:22px;line-height:1.68">Two AI tiers matched to task type. High-frequency tasks run locally at zero cost. Complex strategic analysis routes to frontier models where quality determines client outcomes.</p>
         <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-lg);padding:20px;margin-bottom:14px">
           <div style="font-family:var(--f-m);font-size:10px;letter-spacing:2px;color:var(--teal-light);margin-bottom:10px">OLLAMA — LOCAL (ALL THREE LAYERS)</div>
-          <p style="font-size:.85rem;color:rgba(255,255,255,.6);margin-bottom:6px">Layer 1: classification, embeddings, anomaly summaries. Layer 2: recommendation routing, approval formatting. Layer 3: pre-execution validation logic, execution log processing.</p>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.6);margin-bottom:6px">Layer 1: content classification by pillar/tone/intent, embeddings, anomaly summaries. Layer 2: recommendation routing, approval formatting for both paid and content decisions. Layer 3: pre-execution validation, content brief quality checks, execution log processing.</p>
           <div style="font-size:11px;color:rgba(255,255,255,.3);font-style:italic">Zero data routing. Zero marginal cost. Full data sovereignty.</div>
         </div>
         <div style="background:rgba(255,255,255,.04);border:1px solid rgba(200,146,42,.25);border-radius:var(--r-lg);padding:20px">
@@ -1026,6 +972,382 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
     </div>
   </div>
 </section>
+</div>
+
+
+<!-- ===================== FAQ ===================== -->
+<div class="page" id="page-faq">
+<div style="height:68px"></div>
+<section class="sec sec-dark">
+  <div class="w">
+    <span class="eye eye-d">Frequently Asked Questions</span>
+    <h1 class="tw mt3 mb4">Answers to the questions<br>we hear most often.</h1>
+    <p class="lead lead-w" style="max-width:660px">Two audiences, two sets of questions. Select your category below. If you don't find what you're looking for, book a demo and ask us directly.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="w">
+    <!-- FAQ TABS -->
+    <div class="tabs" style="justify-content:flex-start;margin-bottom:36px">
+      <div class="tab active faq-tab" onclick="switchFaqTab(this,'faq-biz')">For Businesses</div>
+      <div class="tab faq-tab" onclick="switchFaqTab(this,'faq-agency')">For Agencies</div>
+    </div>
+
+    <!-- BUSINESSES FAQ -->
+    <div id="faq-biz" class="faq-panel active">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>What exactly is MIDAS — and how is it different from the analytics I already have?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Most businesses have platform dashboards — Google Ads showing one number, Meta showing another, GA4 showing a third. Each platform reports in its own interest, overstating its contribution and undercounting every other channel. MIDAS sits above all of them. It collects data from every platform simultaneously, builds attribution models that cross channel boundaries, detects anomalies before they cost budget, and delivers plain-English intelligence every morning — automatically. It is not a better dashboard. It is the intelligence layer your current dashboards cannot provide.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>We already use GA4 and our ad platform dashboards. Why isn't that enough?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Because each platform can only see its own data. Google Ads cannot see your Meta spend. Meta cannot see your email performance. Neither can see your CRM outcomes. When you add up what your platforms claim they drove, you will typically get well over 100% of your actual conversions — because each one claims every conversion it touched. MIDAS builds attribution across all channels simultaneously. Most clients find their actual channel mix looks significantly different from what platforms report — often discovering that one or two channels are dramatically undervalued and one or two are dramatically overvalued.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Do we need a data team or technical expertise to use MIDAS?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">No. MIDAS is a fully managed service. We connect all your marketing platforms, configure all the models, build your dashboards, and run everything. Your team receives intelligence — dashboards, anomaly alerts, AI-generated insight summaries, and structured recommendations. You read it and act on it. No data engineering, no infrastructure management, no technical skills required on your side.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>How long before we see results?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Your first dashboards are live in weeks 3–4 of onboarding, covering your largest marketing channels. Cross-channel attribution is operational by week 8. Full channel coverage — including email, SEO, competitive intelligence, and content performance — by week 12. The platform continues to deepen as it learns your business, and the AI recommendations improve meaningfully over the first 6 months as preference calibration develops.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>What marketing platforms do you connect to?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">We connect to Google Ads, Meta Ads, LinkedIn Ads, Google Analytics 4, Google Search Console, HubSpot, Salesforce, most major email platforms (Mailchimp, Klaviyo, Campaign Monitor), Shopify, WooCommerce, SEO tools, and more. Our orchestration engine (n8n) has 400+ native integrations. If you use a platform not on this list, it is almost certainly connectable — we confirm during onboarding scoping.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Is my data secure? Who can access it?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Your data is stored in a managed environment where row-level security at the database level means it is structurally inaccessible to any other client — enforced by the database itself, not application logic. AI inference for high-frequency tasks (classification, tagging, summaries) runs locally within the platform — your data never leaves for these tasks. For complex analytical reasoning, we use frontier AI APIs under enterprise agreements that explicitly prohibit using your data for model training. A full audit trail covers every data load, AI inference, and action executed on your account.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>What is Layer 2 and do we have to use it?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Layer 2 is the decision and automation layer — where MIDAS generates specific recommendations (for example, "reduce the 25–34 budget by $150 and reallocate to 35–44") and presents them for your approval via Slack or Notion. You approve, reject, modify, or defer. Nothing executes without your decision. Layer 2 is entirely optional — you can remain on Layer 1 intelligence indefinitely. Most clients spend 3–6 months on Layer 1 before activating Layer 2, and the transition is natural because Layer 2 builds directly on the baselines Layer 1 has already established.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Can the AI make mistakes that affect my campaigns?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Yes — AI makes mistakes, and we design around that rather than pretending otherwise. Layer 2 is structured so that every recommendation requires human approval before anything executes. You read the situation, diagnosis, proposed action, expected outcome, and confidence level — then decide. Layer 3 autonomous execution only activates for action types where you have explicitly set boundaries, and five safety checks run before every autonomous action — including spend cap enforcement and pre-execution state validation. If any check fails, the action aborts and you receive an alert.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Does MIDAS cover content marketing — or only paid media?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Both. MIDAS includes a dedicated Content Marketing Intelligence module as part of Layer 1. It tracks which blog posts, social content, and downloadable assets are generating qualified leads — connecting content assets to business outcomes through multi-touch attribution. Layer 2 generates content recommendations using the same structured format as paid media: pillar rebalancing, SEO gap opportunities, posting schedule optimisation. Layer 3 can schedule and publish approved content autonomously, with performance data feeding back into every future content brief.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Can we start with Layer 1 only and add Layers 2 and 3 later?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Yes — and this is how most clients begin. Each layer is independently valuable. Layer 1 gives you unified intelligence across every channel. Layer 2 adds structured AI recommendations and human-approved automation. Layer 3 adds autonomous execution within limits you define. You progress at your own pace, and each layer activates naturally when you are comfortable with what the previous one has established. There is no pressure to move faster than your confidence in the system supports.</div>
+      </div>
+    </div>
+
+    <!-- AGENCIES FAQ -->
+    <div id="faq-agency" class="faq-panel" style="display:none">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>What exactly is the MIDAS agency partner programme?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">You access the full three-layer MIDAS platform — Data & Intelligence, Decision & Automation, and Channel Execution — and deploy it for your clients under your own agency brand. You own the client relationship and set your own pricing. We provide the infrastructure, all technical setup for each client, ongoing maintenance, and platform development. Your clients see your brand on every dashboard, every Slack recommendation, every execution report. MIDAS is never visible to them.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>How does the commercial model work?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">We charge you a per-client monthly wholesale fee that decreases as your client volume grows. You charge your clients whatever your market supports — the margin between your client fee and our wholesale rate is yours. At 5 clients, margin is typically 40–50%. At 15+ clients, 45–55% on a significantly larger revenue base. Additional revenue streams include setup fees per new client, Layer 2 and Layer 3 activation fees, custom dashboard development, and strategic consulting. Final pricing confirmed at partner onboarding.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Do we need data engineering or technical skills to deliver this service?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">No. You need marketing domain expertise and strong client relationship skills — the same things that make you effective today. All platform integrations, data pipeline configuration, model operation, and dashboard builds are handled entirely by us. When you brief us on a new client, we configure the platform. Your team receives branded dashboards and a workspace ready to deliver to your client. No data engineering, no infrastructure management.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>How does the white-label branding actually work?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">During partner onboarding, your agency name and visual identity are configured into the platform. Dashboards carry your branding. Slack approval messages come from a bot set up under your agency name. Notion workspaces use your naming conventions. Any exports from the platform include your branding. MIDAS does not appear anywhere in client-facing materials — not in the product name, the sender identity, or any report. Your clients experience it as your analytics service.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>What makes clients genuinely hard to leave once they are on MIDAS?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Three compounding mechanisms that grow over time. First: the preference learning profile — every Layer 2 approval and rejection builds a calibrated model of how this client thinks and decides. After 12 months, this represents 25–40 specific calibrated preferences a new provider cannot replicate without starting from scratch. Second: the outcome history library — months of "recommendation made → approved → outcome measured" data that constitutes evidence the service works. Third: the approval rate trajectory — from roughly 40% in month one to 85%+ by month twelve. No competitor starting fresh can show this chart for your client. Only you can.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>A client asks why they need our analytics service when they already have GA4 and platform dashboards. What do we say?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">GA4 shows what happened on your website. Platform dashboards show each platform's version of its own performance. Neither gives you attribution across channels, AI-generated explanations of anomalies, structured recommendations for what to change, or any execution capability. What you are offering is not a better version of what they already have — it is a fundamentally different intelligence layer that connects all of their data and tells them what their marketing is actually doing, with specific recommended actions to improve it.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>A client is considering bringing analytics in-house. How do we handle this?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Acknowledge the instinct — it is reasonable. Then make the real cost visible: building a comparable in-house stack takes 12–18 months, significant engineering investment, and a recurring team cost to maintain. And when they leave your engagement, everything built for them — the preference profile, the outcome history, the approval rate trajectory — is lost. A new in-house team starts from zero. The question is not "in-house vs. managed service" — it is "at what cost, over what timeline, and at the expense of what operational continuity?"</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>What does a good first MIDAS client look like for our agency?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">The best first client is one running marketing activity across multiple channels — paid, organic, email, or content — with at least some CRM data, and a marketing lead who is analytically curious and open to a new way of seeing their data. The commercial relationship should be strong enough that they are willing to be an early partner. We recommend starting with a client where the attribution analysis is likely to surface a genuinely interesting insight early — the discovery moment is the most powerful demonstration of value and sets the tone for the entire engagement.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>How quickly can we onboard our first client?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">From partner agreement signed to first client dashboards live is typically 4–6 weeks. The first two weeks cover platform configuration for your agency — brand setup, workspace configuration, dashboard templates. Weeks three and four cover connecting the client's platforms and building their specific dashboards. Weeks five and six cover data validation, refinement, and client delivery. Each subsequent client onboards faster as templates and processes mature.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>What happens to our revenue if a client leaves?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Their wholesale cost is removed from your billing immediately. The margin on that client stops. The structural protection against this is the compounding retention mechanics built into the platform — after 6–12 months of Layer 2 operation, leaving means the client loses a preference profile, an outcome history, and an approval rate trajectory they cannot take with them and cannot replicate quickly elsewhere. Layer 3 deepens this further: once autonomous execution is running their trusted action types, switching providers means losing not just intelligence but operational continuity. Switching cost is genuine and growing — not contractual.</div>
+      </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div style="margin-top:56px;padding:36px;background:var(--off);border-radius:var(--r-lg);text-align:center;border:1px solid var(--light)">
+      <h3 class="tn mb4">Didn't find what you were looking for?</h3>
+      <p style="color:var(--mid);max-width:480px;margin:0 auto 22px;font-size:.95rem">Book a demo and ask us anything directly. No scripts, no sales pressure — just honest answers about whether MIDAS is right for your situation.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <button class="btn btn-gold btn-lg">Book a Demo</button>
+        <a href="mailto:info@nettscience.com" class="btn btn-navy btn-lg" style="color:var(--white)">Email Us Directly</a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ===================== ABOUT ===================== -->
+<div class="page" id="page-about">
+<div style="height:68px"></div>
+<section class="sec sec-dark">
+  <div class="w">
+    <span class="eye eye-d">About MIDAS &amp; NettScience</span>
+    <h1 class="tw mt3 mb4">Fifteen years of marketing analytics expertise.<br><span class="tg">One platform that operationalises it.</span></h1>
+    <p class="lead lead-w" style="max-width:700px">MIDAS is not a startup idea. It is what fifteen years of solving real marketing data problems looks like when it becomes a product — built by NettScience, a Bengaluru-based marketing analytics consultancy founded in 2009.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="w">
+    <div class="g2" style="gap:48px;align-items:start">
+      <div>
+        <span class="eye">Who We Are</span>
+        <h2 class="tn mt3 mb4">The analytics firm behind the platform.</h2>
+        <p style="color:var(--mid);line-height:1.72;margin-bottom:14px">NettScience was founded in 2009 in Bengaluru, India as a marketing analytics and data-driven marketing solutions agency. Our journey began with a pioneering offshore analytics engagement for one of the world's largest digital marketing agencies in New York — an engagement that taught us what serious marketing intelligence looks like when it is done properly.</p>
+        <p style="color:var(--mid);line-height:1.72;margin-bottom:14px">Fifteen years and twenty-plus case studies later, we have served clients across Telecom, Financial Services, Pharmaceuticals, Healthcare, FMCG, Alcoholic Beverages, Retail, E-Commerce, Education, and Technology — including several Fortune 500 companies — across India and internationally.</p>
+        <p style="color:var(--mid);line-height:1.72">MIDAS is the product that systematises what we have learned across all of those engagements. It makes the outcomes of good analytical work continuously available — automatically, every morning — rather than as a periodic consultancy deliverable.</p>
+      </div>
+      <div>
+        <div style="background:var(--off);border-radius:var(--r-lg);padding:28px;margin-bottom:20px">
+          <div style="font-family:var(--f-m);font-size:10px;letter-spacing:2px;color:var(--teal);margin-bottom:16px;text-transform:uppercase">NettScience at a Glance</div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;gap:12px;align-items:center;padding:12px;background:var(--white);border-radius:var(--r);border-left:3px solid var(--teal)"><div style="font-family:var(--f-d);font-weight:800;font-size:1.6rem;color:var(--teal);width:60px;flex-shrink:0">2009</div><div style="font-size:.86rem;color:var(--mid)">Founded in Bengaluru, India</div></div>
+            <div style="display:flex;gap:12px;align-items:center;padding:12px;background:var(--white);border-radius:var(--r);border-left:3px solid var(--gold)"><div style="font-family:var(--f-d);font-weight:800;font-size:1.6rem;color:var(--gold);width:60px;flex-shrink:0">15+</div><div style="font-size:.86rem;color:var(--mid)">Years of marketing analytics consultancy</div></div>
+            <div style="display:flex;gap:12px;align-items:center;padding:12px;background:var(--white);border-radius:var(--r);border-left:3px solid var(--navy)"><div style="font-family:var(--f-d);font-weight:800;font-size:1.6rem;color:var(--navy);width:60px;flex-shrink:0">20+</div><div style="font-size:.86rem;color:var(--mid)">Published case studies across industries</div></div>
+            <div style="display:flex;gap:12px;align-items:center;padding:12px;background:var(--white);border-radius:var(--r);border-left:3px solid var(--teal)"><div style="font-family:var(--f-d);font-weight:800;font-size:1.6rem;color:var(--teal);width:60px;flex-shrink:0">F500</div><div style="font-size:.86rem;color:var(--mid)">Fortune 500 companies served</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-off">
+  <div class="w">
+    <span class="eye">Why We Built MIDAS</span>
+    <h2 class="tn mt3 mb4" style="max-width:680px">We kept solving the same problem. We decided to automate it.</h2>
+    <p style="color:var(--mid);line-height:1.72;max-width:760px;margin-bottom:28px">Every client we have ever worked with had more data than they could make sense of. Each platform claiming more attribution credit than was mathematically possible. Each dashboard requiring a separate login, a separate analyst, and hours of manual assembly before anything useful emerged. We built attribution models manually. We wrote anomaly detection scripts. We assembled recommendation frameworks by hand. The results were consistently valuable — but the process was expensive, slow, and not continuous.</p>
+    <div class="g3">
+      <div style="background:var(--white);border:1px solid var(--light);border-radius:var(--r-lg);padding:22px;border-top:3px solid var(--teal)"><h4 class="tn mb3">The attribution problem</h4><p style="font-size:.87rem;color:var(--mid)">Platform-reported attribution is systematically biased. Every platform overstates its contribution. We built cross-channel attribution models for clients for years. MIDAS runs them automatically, every morning.</p></div>
+      <div style="background:var(--white);border:1px solid var(--light);border-radius:var(--r-lg);padding:22px;border-top:3px solid var(--gold)"><h4 class="tn mb3">The intelligence gap</h4><p style="font-size:.87rem;color:var(--mid)">Most marketing teams have plenty of data but almost no unified intelligence. The gap between data and intelligence is exactly what MIDAS fills — automatically, across all channels simultaneously.</p></div>
+      <div style="background:var(--white);border:1px solid var(--light);border-radius:var(--r-lg);padding:22px;border-top:3px solid var(--navy)"><h4 class="tn mb3">The decision gap</h4><p style="font-size:.87rem;color:var(--mid)">By the time a report surfaces a problem, conditions have changed. MIDAS detects anomalies in real time, drafts a structured recommendation, and presents it for approval — before budget is wasted.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-dark">
+  <div class="w">
+    <span class="eye eye-d">Leadership</span>
+    <h2 class="tw mt3 mb8">The expertise behind MIDAS.</h2>
+    <div class="g2" style="gap:48px;align-items:start">
+      <div>
+        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:28px;border-left:4px solid var(--gold)">
+          <div style="font-family:var(--f-d);font-weight:800;font-size:1.3rem;color:var(--white);margin-bottom:4px">Raja Bhat</div>
+          <div style="font-family:var(--f-m);font-size:10px;letter-spacing:1.5px;color:var(--gold);margin-bottom:16px;text-transform:uppercase">Founder &amp; Managing Director, NettScience</div>
+          <p style="font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:14px">Raja leads NettScience with over 30 years of experience spanning sales, marketing communications, market research, and marketing analytics. His expertise covers marketing strategy, statistics, generative AI, big data analytics, and machine learning — the full spectrum of what MIDAS operationalises.</p>
+          <p style="font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:18px">The MIDAS platform reflects his philosophy directly: business problems first, analytical methods second. Intelligence that is accessible, not just impressive. Outcomes measured, not just outputs reported.</p>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="background:rgba(255,255,255,.06);border-radius:var(--r);padding:10px 14px;font-size:.83rem;color:rgba(255,255,255,.7)">🎓 MBA in Marketing &amp; Finance — T.A. Pai Management Institute (TAPMI)</div>
+            <div style="background:rgba(255,255,255,.06);border-radius:var(--r);padding:10px 14px;font-size:.83rem;color:rgba(255,255,255,.7)">🏅 Award of Achievement in Web Analytics — University of British Columbia</div>
+            <div style="background:rgba(255,255,255,.06);border-radius:var(--r);padding:10px 14px;font-size:.83rem;color:rgba(255,255,255,.7)">📍 30+ years in marketing, analytics, and AI across India and international markets</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="tw mb6">Our team's capabilities.</h3>
+        <p style="color:rgba(255,255,255,.62);line-height:1.68;margin-bottom:20px">MIDAS is not a platform built by engineers who learned marketing. It is a platform built by analysts who learned engineering. The distinction matters — the hardest problems in marketing intelligence are domain problems, not technical ones.</p>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div class="cd"><strong style="color:var(--gold)">Advanced Analytics</strong><p style="font-size:.85rem;color:rgba(255,255,255,.58);margin-top:4px">Predictive modelling, customer insights, marketing effectiveness measurement, financial analysis. The models powering MIDAS are battle-tested approaches refined through actual commercial use.</p></div>
+          <div class="cd"><strong style="color:var(--gold)">Digital Marketing Analytics</strong><p style="font-size:.85rem;color:rgba(255,255,255,.58);margin-top:4px">AI-powered campaign analytics, attribution modelling, customer journey insights, SEO and content analytics. The direct predecessor to MIDAS Layer 1 — now automated and continuous.</p></div>
+          <div class="cd"><strong style="color:var(--gold)">Market Research</strong><p style="font-size:.85rem;color:rgba(255,255,255,.58);margin-top:4px">Qualitative and quantitative methods, consumer insights, competitive intelligence, opportunity assessment. This depth informs how MIDAS's competitive intelligence module is designed.</p></div>
+          <div class="cd"><strong style="color:var(--gold)">BI &amp; Data Visualisation</strong><p style="font-size:.85rem;color:rgba(255,255,255,.58);margin-top:4px">Power BI, Tableau, Apache Superset. The MIDAS dashboard layer is the productised evolution of this capability — fully integrated with the data warehouse, not requiring external connections.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="w">
+    <span class="eye">Track Record</span>
+    <h2 class="tn mt3 mb4">Fifteen years. Twenty-plus industries. Measurable impact.</h2>
+    <p class="lead mb8" style="max-width:680px">Every analytical model in MIDAS maps to work NettScience has done for real clients in production. This is what makes MIDAS different from platforms built by engineers who studied marketing.</p>
+    <div class="g3" style="margin-bottom:32px">
+      <div style="background:var(--off);border-radius:var(--r-lg);padding:22px;text-align:center">
+        <div style="font-family:var(--f-d);font-size:2rem;font-weight:800;color:var(--teal)">10%</div>
+        <div style="font-size:.85rem;color:var(--mid);margin-top:4px">Subscriber churn reduction for a telecom provider using predictive churn modelling and targeted retention strategies</div>
+      </div>
+      <div style="background:var(--off);border-radius:var(--r-lg);padding:22px;text-align:center">
+        <div style="font-family:var(--f-d);font-size:2rem;font-weight:800;color:var(--gold)">22%</div>
+        <div style="font-size:.85rem;color:var(--mid);margin-top:4px">Increase in online enrolment for a business school through data-driven campaign strategy and audience segmentation</div>
+      </div>
+      <div style="background:var(--off);border-radius:var(--r-lg);padding:22px;text-align:center">
+        <div style="font-family:var(--f-d);font-size:2rem;font-weight:800;color:var(--navy)">15%</div>
+        <div style="font-size:.85rem;color:var(--mid);margin-top:4px">Revenue increase for a telecom company through Customer Journey Analytics and integrated data strategy</div>
+      </div>
+    </div>
+    <div style="background:var(--off);border-radius:var(--r-lg);padding:24px">
+      <div style="font-family:var(--f-m);font-size:10px;letter-spacing:2px;color:var(--teal);margin-bottom:16px;text-transform:uppercase">Industries Served</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <span style="background:var(--white);border:1px solid var(--light);border-radius:100px;padding:5px 14px;font-size:.83rem;color:var(--dark)">Telecommunications</span>
+        <span style="background:var(--white);border:1px solid var(--light);border-radius:100px;padding:5px 14px;font-size:.83rem;color:var(--dark)">Financial Services</span>
+        <span style="background:var(--white);border:1px solid var(--light);border-radius:100px;padding:5px 14px;font-size:.83rem;color:var(--dark)">Pharmaceuticals</span>
+        <span style="background:var(--white);border:1px solid var(--light);border-radius:100px;padding:5px 14px;font-size:.83rem;color:var(--dark)">Healthcare</span>
+        <span style="background:var(--white);border:1px solid var(--light);border-radius:100px;padding:5px 14px;font-size:.83rem;color:var(--dark)">FMCG</span>
+        <span style="background:var(--white);border:1px solid var(--light);border-radius:100px;padding:5px 14px;font-size:.83rem;color:var(--dark)">Alcoholic Beverages</span>
+        <span style="background:var(--white);border:1px solid var(--light);border-radius:100px;padding:5px 14px;font-size:.83rem;color:var(--dark)">Retail</span>
+        <span style="background:var(--white);border:1px solid var(--light);border-radius:100px;padding:5px 14px;font-size:.83rem;color:var(--dark)">E-Commerce</span>
+        <span style="background:var(--white);border:1px solid var(--light);border-radius:100px;padding:5px 14px;font-size:.83rem;color:var(--dark)">Education &amp; EdTech</span>
+        <span style="background:var(--white);border:1px solid var(--light);border-radius:100px;padding:5px 14px;font-size:.83rem;color:var(--dark)">Technology &amp; SaaS</span>
+        <span style="background:rgba(15,123,138,.1);border:1px solid rgba(15,123,138,.2);border-radius:100px;padding:5px 14px;font-size:.83rem;color:var(--teal)">+ Fortune 500 clients</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-off">
+  <div class="w">
+    <div class="g2" style="gap:48px;align-items:start">
+      <div>
+        <span class="eye">Our Services</span>
+        <h2 class="tn mt3 mb4">Beyond MIDAS — the full NettScience service suite.</h2>
+        <p style="color:var(--mid);line-height:1.68;margin-bottom:20px">MIDAS is our most comprehensive product, but NettScience continues to deliver the full range of marketing analytics services that generated the domain knowledge powering it. For organisations whose needs extend beyond what a platform addresses, we deliver bespoke analytical engagements.</p>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="padding:14px;background:var(--white);border-radius:var(--r);border:1px solid var(--light);border-left:3px solid var(--teal)"><strong class="tn">Strategic Analytics &amp; Intelligence</strong><p style="font-size:.84rem;color:var(--mid);margin-top:3px">Predictive models, market intelligence, and ROI frameworks that turn complex data into strategic clarity.</p></div>
+          <div style="padding:14px;background:var(--white);border-radius:var(--r);border:1px solid var(--light);border-left:3px solid var(--gold)"><strong class="tn">Growth Strategy &amp; Market Expansion</strong><p style="font-size:.84rem;color:var(--mid);margin-top:3px">Go-to-market strategies, market entry roadmaps, and positioning models grounded in data-driven intelligence.</p></div>
+          <div style="padding:14px;background:var(--white);border-radius:var(--r);border:1px solid var(--light);border-left:3px solid var(--navy)"><strong class="tn">Customer Acquisition &amp; Retention</strong><p style="font-size:.84rem;color:var(--mid);margin-top:3px">Churn modelling, predictive lead scoring, lifecycle optimisation — systems that maximise customer LTV.</p></div>
+          <div style="padding:14px;background:var(--white);border-radius:var(--r);border:1px solid var(--light);border-left:3px solid var(--teal)"><strong class="tn">Experience &amp; Journey Optimisation</strong><p style="font-size:.84rem;color:var(--mid);margin-top:3px">Customer journey mapping and analytics that identify friction, drop-off, and high-intent moments across touchpoints.</p></div>
+          <div style="padding:14px;background:var(--white);border-radius:var(--r);border:1px solid var(--light);border-left:3px solid var(--gold)"><strong class="tn">Campaign Development &amp; Execution</strong><p style="font-size:.84rem;color:var(--mid);margin-top:3px">Data-driven campaigns from audience segmentation and creative strategy through to measurement and attribution.</p></div>
+        </div>
+      </div>
+      <div>
+        <span class="eye">Our Approach</span>
+        <h2 class="tn mt3 mb4">How we work.</h2>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="padding:20px;background:var(--white);border-radius:var(--r-lg);border:1px solid var(--light);border-top:3px solid var(--teal)">
+            <h4 class="tn mb3">Business question first. Technology second.</h4>
+            <p style="font-size:.87rem;color:var(--mid)">Before any model is built or dashboard configured, we understand what decision the client is trying to make better. The technology serves that question — it does not define it.</p>
+          </div>
+          <div style="padding:20px;background:var(--white);border-radius:var(--r-lg);border:1px solid var(--light);border-top:3px solid var(--gold)">
+            <h4 class="tn mb3">Intelligence accessible, not just impressive.</h4>
+            <p style="font-size:.87rem;color:var(--mid)">The most sophisticated attribution model is worthless if the person making budget decisions cannot understand it. MIDAS generates plain-English explanations because we have spent fifteen years watching analytical outputs ignored for being in the wrong language.</p>
+          </div>
+          <div style="padding:20px;background:var(--white);border-radius:var(--r-lg);border:1px solid var(--light);border-top:3px solid var(--navy)">
+            <h4 class="tn mb3">Outcomes measured, not just outputs reported.</h4>
+            <p style="font-size:.87rem;color:var(--mid)">A recommendation that is approved, executed, and produces the predicted result is success. This shapes how MIDAS's measurement and feedback loop is designed — outcomes tracked against predictions, gaps informing every subsequent recommendation.</p>
+          </div>
+        </div>
+        <div style="margin-top:20px;background:rgba(15,123,138,.07);border:1px solid rgba(15,123,138,.2);border-radius:var(--r-lg);padding:20px">
+          <div style="font-family:var(--f-m);font-size:10px;letter-spacing:1.5px;color:var(--teal);margin-bottom:10px">CONTACT</div>
+          <div style="font-size:.88rem;color:var(--dark);line-height:1.7">
+            <div>📍 Bengaluru, India</div>
+            <div>📞 +91 98459 05041</div>
+            <div>✉ info@nettscience.com</div>
+            <div style="margin-top:8px"><a href="https://nettscience.com" style="color:var(--teal);font-weight:600">nettscience.com ↗</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="w" style="position:relative;text-align:center">
+    <h2 class="tw">Ready to see fifteen years of marketing analytics expertise running automatically?</h2>
+    <p class="lead lead-w mt4" style="max-width:560px;margin:12px auto 26px">MIDAS was built by analysts who have solved these problems for real clients across fifteen years. Every model, every recommendation structure, every dashboard reflects that depth.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <button class="btn btn-gold btn-xl">Book a Demo</button>
+      <a href="https://nettscience.com/about" class="btn btn-out btn-lg" style="color:rgba(255,255,255,.88)">Visit NettScience ↗</a>
+    </div>
+  </div>
+</div>
 </div>
 
 <!-- ===================== SITEMAP ===================== -->
@@ -1067,7 +1389,7 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
       <div class="smc"><div class="smname">③ Contact / Book Demo</div><div class="smurl">/contact</div><div class="smpurp">Three contact paths: Book Demo (Calendly), Get Proposal (form), Partner Enquiry (form). Primary conversion point.</div><div class="smtags"><span class="smtag">Calendly Embed</span><span class="smtag">Proposal Form</span></div></div>
       <div class="smc"><div class="smname">④ Platform Overview</div><div class="smurl">/platform</div><div class="smpurp">Full six-step loop diagram. Three-layer technology stack table. Daily cycle timeline. Mid-funnel for curious buyers from either audience.</div><div class="smtags"><span class="smtag">Book Demo</span><span class="smtag">Architecture Brief</span></div></div>
       <div class="smc"><div class="smname">④ Technology</div><div class="smurl">/technology</div><div class="smpurp">Full stack detail. Six security layers including L3 execution logging. VPS + Docker. AI routing. Data residency. For technical buyers and enterprise clients.</div><div class="smtags"><span class="smtag">Architecture Brief</span><span class="smtag">Technical Demo</span></div></div>
-      <div class="smc"><div class="smname">⑤ Layer 1 Detail</div><div class="smurl">/platform/layer-1</div><div class="smpurp">Data &amp; Intelligence depth page. Six capabilities. 15+ data sources. Dashboard examples. How it feeds Layers 2 and 3.</div><div class="smtags"><span class="smtag">Book Demo</span><span class="smtag">L1 Brief PDF</span></div></div>
+      <div class="smc"><div class="smname">⑤ Layer 1 Detail</div><div class="smurl">/platform/layer-1</div><div class="smpurp">Data &amp; Intelligence depth page. Seven capabilities including Content Marketing Intelligence. 15+ data sources covering paid, organic, content, and email. Dashboard examples. How it feeds Layers 2 and 3.</div><div class="smtags"><span class="smtag">Book Demo</span><span class="smtag">L1 Brief PDF</span></div></div>
       <div class="smc"><div class="smname">⑤ Layer 2 Detail</div><div class="smurl">/platform/layer-2</div><div class="smpurp">Decision &amp; Automation depth. Six-step loop. Recommendation structure. Approval channels. Four decision options. Preference learning. Approval rate chart.</div><div class="smtags"><span class="smtag">Book Demo</span><span class="smtag">L2 Brief PDF</span></div></div>
       <div class="smc"><div class="smname">⑤ Layer 3 Detail</div><div class="smurl">/platform/layer-3</div><div class="smpurp">Channel Execution depth. Five-stage execution architecture. Eight execution channels. Five safety checks. Path to Layer 3 (calibration → limits → autonomy).</div><div class="smtags"><span class="smtag">Book Demo</span><span class="smtag">L3 Brief PDF</span></div></div>
       <div class="smc"><div class="smname">⑤ Pricing</div><div class="smurl">/for-businesses/pricing</div><div class="smpurp">Three tiers: L1 only, L1+L2, Full stack L1+L2+L3. What each includes. Enterprise custom. Get a proposal CTA.</div><div class="smtags"><span class="smtag">Get a Proposal</span><span class="smtag">Book Demo</span></div></div>
@@ -1116,24 +1438,24 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
           <div class="logo-mark">M</div>
           <div><span class="logo-p">MIDAS</span><span class="logo-s">by NettScience</span></div>
         </div>
-        <div class="ft-tag">Marketing Intelligence &amp; Decision Automation System. All three layers live. A NettScience platform for data-driven marketing teams and agencies who want intelligence that acts.</div>
+        <div class="ft-tag">Marketing Intelligence &amp; Decision Automation System. All three layers live. Intelligence across paid media, content marketing, email, and CRM — for marketing teams and agencies who want intelligence that acts.</div>
         <div style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap">
-          <button class="btn btn-gold" style="font-size:12px" onclick="openDemoModal()">Book a Demo</button>
+          <button class="btn btn-gold" style="font-size:12px">Book a Demo</button>
           <button class="btn btn-out" style="font-size:12px">Download Brief</button>
         </div>
       </div>
       <div>
         <div class="ftct">Platform</div>
-        <a class="ftl" href="#platform" onclick="showPage('platform')">Overview</a>
-        <a class="ftl" href="#data-intelligence" onclick="showPage('l1')">Layer 1 — Data &amp; Intelligence</a>
-        <a class="ftl" href="#decision-automation" onclick="showPage('l2')">Layer 2 — Decision &amp; Automation</a>
-        <a class="ftl" href="#channel-execution" onclick="showPage('l3')">Layer 3 — Channel &amp; Execution</a>
-        <a class="ftl" href="#technology" onclick="showPage('technology')">Technology &amp; Security</a>
+        <a class="ftl" onclick="showPage('platform')">Overview</a>
+        <a class="ftl" onclick="showPage('l1')">Layer 1 — Intelligence</a>
+        <a class="ftl" onclick="showPage('l2')">Layer 2 — Automation</a>
+        <a class="ftl" onclick="showPage('l3')">Layer 3 — Execution</a>
+        <a class="ftl" onclick="showPage('technology')">Technology &amp; Security</a>
       </div>
       <div>
         <div class="ftct">Audiences</div>
-        <a class="ftl" href="#for-businesses" onclick="showPage('businesses')">For Businesses</a>
-        <a class="ftl" href="#for-agencies" onclick="showPage('agencies')">For Agencies</a>
+        <a class="ftl" onclick="showPage('businesses')">For Businesses</a>
+        <a class="ftl" onclick="showPage('agencies')">For Agencies</a>
         <a class="ftl" href="#">Partner Programme</a>
         <a class="ftl" href="#">Pricing</a>
         <a class="ftl" href="#">Case Studies</a>
@@ -1143,6 +1465,7 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
         <a class="ftl" href="https://nettscience.com">NettScience ↗</a>
         <a class="ftl" href="#">Blog &amp; Resources</a>
         <a class="ftl" href="#">Contact Us</a>
+        <a class="ftl" onclick="showPage('sitemap')" style="cursor:pointer">Site Map</a>
         <div style="margin-top:14px">
           <div class="ftct">Stack</div>
           <div style="display:flex;flex-wrap:wrap;gap:4px">
@@ -1157,14 +1480,13 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
       </div>
     </div>
     <div class="ft-bot">
-      <div class="ft-copy">© 2026 MIDAS. A NettScience Platform. All rights reserved.</div>
+      <div class="ft-copy">© 2025 MIDAS. A NettScience Platform. All rights reserved.</div>
       <div class="ft-parent">Part of <a href="https://nettscience.com">NettScience</a> · Bengaluru · +91 98459 05041 · info@nettscience.com</div>
     </div>
   </div>
 </footer>
 
 <script>
-/* ===== PAGE NAVIGATION ===== */
 function showPage(id){
   document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
   document.querySelectorAll(".nl").forEach(l=>l.classList.remove("active"));
@@ -1173,15 +1495,8 @@ function showPage(id){
   document.querySelectorAll(".nl").forEach(l=>{
     if(l.getAttribute("onclick")&&l.getAttribute("onclick").includes("'"+id+"'"))l.classList.add("active");
   });
-  // Mark Solutions dropdown active if a layer is active
-  const layers=["l1","l2","l3"];
-  const dd=document.getElementById("solutionsDropdown");
-  if(dd){dd.querySelector(".nl").classList[layers.includes(id)?"add":"remove"]("active");}
   window.scrollTo({top:0,behavior:"smooth"});
-  closeDropdown();
 }
-
-/* ===== TAB SWITCHER ===== */
 function switchTab(el,tabId){
   document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));
   document.querySelectorAll(".panel").forEach(p=>p.classList.remove("active"));
@@ -1189,127 +1504,30 @@ function switchTab(el,tabId){
   const panel=document.getElementById(tabId);
   if(panel)panel.classList.add("active");
 }
-
-/* ===== FAQ ===== */
 function toggleFaq(el){el.parentElement.classList.toggle("open");}
-
-/* ===== SOLUTIONS DROPDOWN ===== */
-function toggleDropdown(){
-  const dd=document.getElementById("solutionsDropdown");
-  dd.classList.toggle("open");
+function switchFaqTab(el,panelId){
+  document.querySelectorAll(".faq-tab").forEach(t=>t.classList.remove("active"));
+  document.querySelectorAll(".faq-panel").forEach(p=>{p.style.display="none";});
+  el.classList.add("active");
+  const panel=document.getElementById(panelId);
+  if(panel){panel.style.display="block";}
 }
-function closeDropdown(){
-  const dd=document.getElementById("solutionsDropdown");
-  if(dd)dd.classList.remove("open");
-}
-document.addEventListener("click",function(e){
-  const dd=document.getElementById("solutionsDropdown");
-  if(dd&&!dd.contains(e.target))dd.classList.remove("open");
-});
-
-/* ===== MOBILE NAV ===== */
-function toggleMobileNav(){
-  const nav=document.getElementById("mobileNav");
-  const btn=document.getElementById("hamburgerBtn");
-  nav.classList.toggle("open");
-  btn.classList.toggle("open");
-}
-function closeMobileNav(){
-  document.getElementById("mobileNav").classList.remove("open");
-  document.getElementById("hamburgerBtn").classList.remove("open");
-}
-function mobileNav(id){
-  closeMobileNav();
-  showPage(id);
-  // Update mobile active state
-  document.querySelectorAll(".mnl").forEach(l=>{
-    l.classList.remove("active");
-    if(l.getAttribute("onclick")&&l.getAttribute("onclick").includes("'"+id+"'"))l.classList.add("active");
-  });
-}
-
-/* ===== DEMO MODAL ===== */
-function openDemoModal(){
-  document.getElementById("demoModal").classList.add("open");
-  document.body.style.overflow="hidden";
-  // Reset to form view in case success was shown
-  document.getElementById("demoFormWrap").style.display="block";
-  document.getElementById("demoSuccess").style.display="none";
-  document.getElementById("demoFormError").style.display="none";
-}
-function closeDemoModal(){
-  document.getElementById("demoModal").classList.remove("open");
-  document.body.style.overflow="";
-}
-function handleModalOverlayClick(e){
-  if(e.target===document.getElementById("demoModal"))closeDemoModal();
-}
-document.addEventListener("keydown",function(e){
-  if(e.key==="Escape")closeDemoModal();
-});
-
-/* ===== FORM SUBMISSION ===== */
-/*
-  HOW TO SET UP EMAIL DELIVERY (free, no third-party service):
-  1. Go to script.google.com → New Project
-  2. Paste this code:
-     function doPost(e) {
-       var data = JSON.parse(e.postData.contents);
-       MailApp.sendEmail({
-         to: "analytics@nettscience.com",
-         subject: "MIDAS Demo Request — " + data.name,
-         body: "Name: " + data.name + "\nEmail: " + data.email + "\nMessage: " + data.message
-       });
-       return ContentService.createTextOutput(JSON.stringify({result:"ok"})).setMimeType(ContentService.MimeType.JSON);
-     }
-  3. Deploy → New deployment → Web App → Execute as: Me → Who has access: Anyone → Deploy
-  4. Copy the Web App URL and replace GOOGLE_SCRIPT_URL below
-*/
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzHCl4wKAZI6MqwJ3_P5XUT1Lp5sHYOb0aQC8KSV0Cis1_p12aWMeow7Rn3_5osWw/exec";
-
-async function submitDemoForm(){
-  const name=document.getElementById("demoName").value.trim();
-  const email=document.getElementById("demoEmail").value.trim();
-  const message=document.getElementById("demoMessage").value.trim();
-  const errBox=document.getElementById("demoFormError");
-  const submitBtn=document.getElementById("demoSubmitBtn");
-  const submitLabel=document.getElementById("demoSubmitLabel");
-  errBox.style.display="none";
-
-  if(!name){errBox.textContent="Please enter your name.";errBox.style.display="block";return;}
-  if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){errBox.textContent="Please enter a valid email address.";errBox.style.display="block";return;}
-
-  submitBtn.disabled=true;
-  submitLabel.textContent="Sending…";
-
-  try{
-    if(GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL !== "https://script.google.com/macros/s/AKfycbzHCl4wKAZI6MqwJ3_P5XUT1Lp5sHYOb0aQC8KSV0Cis1_p12aWMeow7Rn3_5osWw/execPASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE"){
-      await fetch(GOOGLE_SCRIPT_URL,{
-        method:"POST",
-        mode:"no-cors",
-        headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({name,email,message})
-      });
-    }
-    // Show success regardless (no-cors can't read response; delivery confirmed on script side)
-    document.getElementById("demoFormWrap").style.display="none";
-    document.getElementById("demoSuccess").style.display="block";
-    document.getElementById("demoName").value="";
-    document.getElementById("demoEmail").value="";
-    document.getElementById("demoMessage").value="";
-  }catch(err){
-    errBox.textContent="Something went wrong. Please email us at analytics@nettscience.com";
-    errBox.style.display="block";
-    submitBtn.disabled=false;
-    submitLabel.textContent="Request My Demo →";
-  }
-}
-
-/* ===== SCROLL PROGRESS BAR ===== */
 window.addEventListener("scroll",()=>{
   const s=window.scrollY/(document.body.scrollHeight-window.innerHeight);
   const p=document.getElementById("navProg");
   if(p)p.style.transform="scaleX("+s+")";
+});
+function toggleDropdown(){
+  const m=document.getElementById("ddMenu");
+  if(m) m.classList.toggle("open");
+}
+function closeDD(){
+  const m=document.getElementById("ddMenu");
+  if(m) m.classList.remove("open");
+}
+document.addEventListener("click",function(e){
+  const dd=document.getElementById("msDropdown");
+  if(dd && !dd.contains(e.target)) closeDD();
 });
 </script>
 </body>
