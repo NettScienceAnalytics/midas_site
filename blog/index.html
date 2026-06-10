@@ -1,0 +1,20 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+<div class="blog-hero">
+  <span class="eye">MIDAS Journal</span>
+  <h1 class="post-title">Marketing Intelligence, in Practice</h1>
+  <p class="post-sub" style="margin:0 auto">Field notes on attribution, AI-driven decisioning, content intelligence, and building a marketing intelligence platform that acts — from the team at NettScience.</p>
+</div>
+
+<div class="blog-list">
+  {% for post in site.posts %}
+  <a class="bcard" href="{{ post.url | relative_url }}">
+    <div class="bcard-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} · {{ post.author }}{% endif %}</div>
+    <div class="bcard-title">{{ post.title }}</div>
+    <div class="bcard-excerpt">{% if post.subtitle %}{{ post.subtitle }}{% else %}{{ post.excerpt | strip_html | truncatewords: 30 }}{% endif %}</div>
+  </a>
+  {% endfor %}
+</div>

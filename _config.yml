@@ -1,0 +1,25 @@
+title: MIDAS Blog
+description: Marketing Intelligence & Decision Automation System — by NettScience
+url: "https://midas.nettscience.com"
+
+# Pretty URLs: /blog/post-title/ instead of dated paths
+permalink: /blog/:title/
+
+# Default layout for posts
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+
+# Leave the hand-built SPA and infra files untouched.
+# (index.html has no front matter, so Jekyll copies it verbatim — but we
+# exclude supporting files explicitly to be safe.)
+exclude:
+  - README.md
+  - CNAME
+  - "*.docx"
+  - "*.pdf"
+
+# Keep things simple — no plugins needed for GitHub Pages' built-in Jekyll
