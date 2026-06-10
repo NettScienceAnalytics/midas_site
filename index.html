@@ -119,6 +119,8 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
 .page{display:none}.page.active{display:block}
 .l3-accent{color:#A78BFA}.l3-bg{background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.2);border-radius:var(--r-lg);padding:24px}
 @media(max-width:900px){.hero-in,.g2,.g3,.g4,.layers,.ps,.panel.active,.ft-top,.smg,.loop,.exec-flow,.ch-grid{grid-template-columns:1fr}.steps{flex-direction:column;align-items:flex-start}.steps::before{display:none}.nav-links{display:none}.tabs{flex-direction:column;align-items:center}}
+.lm-strip{background:linear-gradient(135deg,var(--off) 0%,#EEF6F8 100%);border:1px solid var(--light);border-radius:var(--r-lg);padding:28px 32px;display:flex;align-items:center;gap:28px;margin:36px 0;border-left:4px solid var(--gold)}.lm-icon{font-size:2.2rem;flex-shrink:0}.lm-body{flex:1}.lm-tag{font-family:var(--f-m);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px}.lm-title{font-family:var(--f-d);font-size:1.05rem;font-weight:800;color:var(--navy);margin-bottom:4px}.lm-desc{font-size:.85rem;color:var(--mid);line-height:1.55}.lm-cta{flex-shrink:0}.lm-btn{display:inline-flex;align-items:center;gap:7px;background:var(--navy);color:var(--white);border:none;border-radius:var(--r);padding:11px 20px;font-size:.85rem;font-weight:700;cursor:pointer;transition:var(--tr);text-decoration:none;white-space:nowrap}.lm-btn:hover{background:var(--navy-deep);transform:translateY(-1px);box-shadow:0 4px 14px rgba(15,28,48,.25)}.lm-btn .lm-dl{background:var(--gold);color:var(--navy-deep);border-radius:3px;padding:2px 5px;font-size:.72rem;font-weight:800;letter-spacing:.5px}
+.lm-band{background:var(--off);border-top:1px solid var(--light);border-bottom:1px solid var(--light);padding:32px;margin:36px 0}.lm-band-inner{max-width:820px;margin:0 auto;display:flex;align-items:center;gap:28px}.lm-band-text{flex:1}.lm-band-tag{font-family:var(--f-m);font-size:9px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:5px}.lm-band-title{font-family:var(--f-d);font-size:1.1rem;font-weight:800;color:var(--navy);margin-bottom:5px}.lm-band-desc{font-size:.85rem;color:var(--mid);line-height:1.55}
 </style>
 </head>
 <body>
@@ -143,6 +145,7 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
       <button class="nl" onclick="showPage('agencies')">For Agencies</button>
       <button class="nl" onclick="showPage('technology')">Technology</button>
       <button class="nl" onclick="showPage('about')">About</button>
+      <a class="nl" href="/blog/">Blog</a>
       <button class="nl" onclick="showPage('faq')">FAQ</button>
     </div>
     <div class="nav-cta">
@@ -220,6 +223,24 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
           <div class="si"><span class="sc">✓</span><div><strong>Autonomous execution</strong> — trusted action types run within your defined limits, continuously</div></div>
           <div class="si"><span class="sc">✓</span><div><strong>Content intelligence</strong> — know which content assets generate pipeline, with attribution connecting every blog post to business outcomes</div></div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding:24px 2rem">
+  <div class="w">
+    <div class="lm-strip">
+      <div class="lm-icon">📊</div>
+      <div class="lm-body">
+        <div class="lm-tag">Free Research Report</div>
+        <div class="lm-title">The Marketing Data Chaos Report</div>
+        <div class="lm-desc">Why your marketing data is lying to you — and what it costs. The 7 symptoms of fragmented data, what each one costs your business, and what unified intelligence looks like.</div>
+      </div>
+      <div class="lm-cta">
+        <a class="lm-btn" href="MIDAS_Marketing_Data_Chaos_Report.pdf" download>
+          <span class="lm-dl">PDF</span> Download Free Report
+        </a>
       </div>
     </div>
   </div>
@@ -338,7 +359,13 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
       <div class="copt"><div class="copt-l">For Businesses</div><div class="copt-t">Book a Demo</div><div class="copt-s">See all three layers on real data</div></div>
       <div class="copt"><div class="copt-l">For Agencies</div><div class="copt-t">Partner Conversation</div><div class="copt-s">Explore the reseller programme</div></div>
       <div class="copt"><div class="copt-l">Download</div><div class="copt-t">Platform Brief PDF</div><div class="copt-s">Full three-layer capability overview</div></div>
-      <div class="copt"><div class="copt-l">Technical</div><div class="copt-t">Architecture Deep Dive</div><div class="copt-s">Stack, security, infrastructure</div></div>
+      <div class="copt"><div class="copt-l">Download</div><div class="copt-t">Architecture Deep Dive</div><div class="copt-s">Stack, security, infrastructure</div></div>
+      <a class="copt" href="MIDAS_Marketing_Data_Chaos_Report.pdf" download style="text-decoration:none"><div class="copt-l">Free Report</div><div class="copt-t">The Data Chaos Report</div><div class="copt-s">Why your data is lying to you</div></a>
+      <a class="copt" href="MIDAS_Agency_Intelligence_Playbook.pdf" download style="text-decoration:none"><div class="copt-l">Free Playbook</div><div class="copt-t">The Agency Playbook</div><div class="copt-s">AI analytics as a revenue stream</div></a>
+      <a class="copt" href="MIDAS_Content_Attribution_Blind_Spot.pdf" download style="text-decoration:none"><div class="copt-l">Free Report</div><div class="copt-t">Content Attribution</div><div class="copt-s">Why content is invisible to your data</div></a>
+      <a class="copt" href="MIDAS_Competitor_Blind_Spot.pdf" download style="text-decoration:none"><div class="copt-l">Free Report</div><div class="copt-t">The Competitor Blind Spot</div><div class="copt-s">Signals you're missing right now</div></a>
+      <a class="copt" href="MIDAS_Share_of_Voice_Playbook.pdf" download style="text-decoration:none"><div class="copt-l">Free Playbook</div><div class="copt-t">Share-of-Voice Playbook</div><div class="copt-s">Measure visibility across all channels</div></a>
+      <a class="copt" href="MIDAS_90Day_Content_Intelligence_Playbook.pdf" download style="text-decoration:none"><div class="copt-l">Free Playbook</div><div class="copt-t">90-Day Content Playbook</div><div class="copt-s">Content you can attribute to revenue</div></a>
     </div>
   </div>
 </div>
@@ -467,6 +494,53 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
       <div class="card"><div class="ct ct-g"></div><div class="ib ib-g">✍️</div><h4 class="tn mb3">Content Marketing Intelligence</h4><p style="font-size:.86rem;color:var(--mid)">Which blog posts, social content, and downloadable assets are generating qualified leads? Content attribution connects every asset to business outcomes. Pillar balance monitoring, SEO gap analysis, competitor content tracking, and optimal posting time signals — in one unified view.</p></div>
       <div class="card"><div class="ct ct-g"></div><div class="ib ib-g">🔍</div><h4 class="tn mb3">Competitive Intelligence</h4><p style="font-size:.86rem;color:var(--mid)">Competitor search rankings, ad activity, and content publishing monitored continuously. Share-of-voice trends, keyword gaps, topic gaps, competitor content performance — surfaced proactively.</p></div>
       <div class="card"><div class="ct ct-n"></div><div class="ib ib-n">📈</div><h4 class="tn mb3">Intelligence Dashboards</h4><p style="font-size:.86rem;color:var(--mid)">Apache Superset dashboards refreshed daily. Paid performance, content performance, attribution, lead scoring — unified in one role-based view. Each person sees exactly the level of detail they need.</p></div>
+    </div>
+  </div>
+</section>
+<section class="sec" style="padding:24px 2rem">
+  <div class="w">
+    <div class="lm-strip">
+      <div class="lm-icon">🔗</div>
+      <div class="lm-body">
+        <div class="lm-tag">Free Research Report — Attribution</div>
+        <div class="lm-title">The Attribution Problem Solved</div>
+        <div class="lm-desc">Platform-reported attribution is broken by design. This practical guide explains the five ways attribution fails you, compares every model from last-click to true cross-channel, and shows what accurate attribution actually looks like.</div>
+      </div>
+      <div class="lm-cta">
+        <a class="lm-btn" href="MIDAS_Attribution_Problem_Solved.pdf" download>
+          <span class="lm-dl">PDF</span> Download Free Guide
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sec" style="padding:24px 2rem">
+  <div class="w">
+    <div class="lm-strip">
+      <div class="lm-icon">✍️</div>
+      <div class="lm-body">
+        <div class="lm-tag">Free Research Report — Content</div>
+        <div class="lm-title">The Content Attribution Blind Spot</div>
+        <div class="lm-desc">Why your content marketing is invisible to your own data. The five structural reasons content fails to get attribution credit — and what a proper content intelligence system tracks from blog post to revenue.</div>
+      </div>
+      <div class="lm-cta">
+        <a class="lm-btn" href="MIDAS_Content_Attribution_Blind_Spot.pdf" download>
+          <span class="lm-dl">PDF</span> Download Free Report
+        </a>
+      </div>
+    </div>
+    <div class="lm-strip" style="margin-top:0">
+      <div class="lm-icon">🔍</div>
+      <div class="lm-body">
+        <div class="lm-tag">Free Research Report — Competitive Intelligence</div>
+        <div class="lm-title">The Competitor Blind Spot</div>
+        <div class="lm-desc">What your competitors are doing right now that you don't know about. The five signals most businesses miss — search, paid, content, ad spend, social SOV — and how to detect them before they impact your own metrics.</div>
+      </div>
+      <div class="lm-cta">
+        <a class="lm-btn" href="MIDAS_Competitor_Blind_Spot.pdf" download>
+          <span class="lm-dl">PDF</span> Download Free Report
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -813,6 +887,53 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
     </div>
   </div>
 </section>
+<section class="sec" style="padding:24px 2rem">
+  <div class="w">
+    <div class="lm-strip">
+      <div class="lm-icon">🎯</div>
+      <div class="lm-body">
+        <div class="lm-tag">Free Research Report — For Businesses</div>
+        <div class="lm-title">The Mid-Market Intelligence Gap</div>
+        <div class="lm-desc">Enterprise marketing intelligence without the enterprise price tag. Why the three current options all fail mid-market businesses — and how the gap is now being closed.</div>
+      </div>
+      <div class="lm-cta">
+        <a class="lm-btn" href="MIDAS_Mid_Market_Intelligence_Gap.pdf" download>
+          <span class="lm-dl">PDF</span> Download Free Report
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sec" style="padding:24px 2rem">
+  <div class="w">
+    <div class="lm-strip">
+      <div class="lm-icon">📡</div>
+      <div class="lm-body">
+        <div class="lm-tag">Free Strategy Playbook</div>
+        <div class="lm-title">The Share-of-Voice Playbook</div>
+        <div class="lm-desc">How to measure and grow your brand's visibility across search, content, paid, and social. The four SOV dimensions, how to calculate each one, targets by market position, and the intelligence calendar that keeps you ahead of competitors.</div>
+      </div>
+      <div class="lm-cta">
+        <a class="lm-btn" href="MIDAS_Share_of_Voice_Playbook.pdf" download>
+          <span class="lm-dl">PDF</span> Download Free Playbook
+        </a>
+      </div>
+    </div>
+    <div class="lm-strip" style="margin-top:0">
+      <div class="lm-icon">✍️</div>
+      <div class="lm-body">
+        <div class="lm-tag">Free Practical Playbook — Content</div>
+        <div class="lm-title">The 90-Day Content Intelligence Playbook</div>
+        <div class="lm-desc">A step-by-step framework for building content you can attribute to revenue. Month 1: audit and baseline. Month 2: build the measurement model. Month 3: intelligence in practice. Beyond 90 days: automated and compounding.</div>
+      </div>
+      <div class="lm-cta">
+        <a class="lm-btn" href="MIDAS_90Day_Content_Intelligence_Playbook.pdf" download>
+          <span class="lm-dl">PDF</span> Download Free Playbook
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="sec sec-off">
   <div class="w">
     <div class="g2" style="gap:48px;align-items:start">
@@ -861,6 +982,23 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
       <div class="card"><div class="ct ct-n"></div><h4 class="tn mb3">30–50% Recurring Margin</h4><p style="font-size:.86rem;color:var(--mid)">New monthly revenue layered on existing billing. Layer 1 analytics tier. Layer 2 automation tier. Layer 3 autonomous execution tier. Each layer adds incremental recurring revenue per client.</p></div>
       <div class="card"><div class="ct ct-t"></div><h4 class="tn mb3">The Preference Moat</h4><p style="font-size:.86rem;color:var(--mid)">After 12 months, your client's preference profile — 25-40 calibrated preferences, accumulated outcome history, semantic content library — belongs to your engagement. A competitor starting fresh cannot replicate it.</p></div>
       <div class="card"><div class="ct ct-g"></div><h4 class="tn mb3">Technical Setup — We Handle It</h4><p style="font-size:.86rem;color:var(--mid)">We manage all platform integrations, data pipeline setup, dashboard configuration, and workflow builds. Your team focuses on the client relationship. No data engineering skills required.</p></div>
+    </div>
+  </div>
+</section>
+<section class="sec" style="padding:24px 2rem">
+  <div class="w">
+    <div class="lm-strip" style="border-left-color:var(--teal)">
+      <div class="lm-icon">📋</div>
+      <div class="lm-body">
+        <div class="lm-tag">Free Playbook — For Agencies</div>
+        <div class="lm-title">The Agency Intelligence Playbook</div>
+        <div class="lm-desc">How forward-thinking agencies are building AI-powered analytics as a recurring revenue stream. The preference moat, the retention mechanism, the commercial model — explained for agency owners and MDs.</div>
+      </div>
+      <div class="lm-cta">
+        <a class="lm-btn" href="MIDAS_Agency_Intelligence_Playbook.pdf" download>
+          <span class="lm-dl">PDF</span> Download Free Playbook
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -972,8 +1110,41 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
     </div>
   </div>
 </section>
+<section class="sec" style="padding:24px 2rem">
+  <div class="w">
+    <div class="lm-strip">
+      <div class="lm-icon">⚙️</div>
+      <div class="lm-body">
+        <div class="lm-tag">Free Technology Guide</div>
+        <div class="lm-title">The AI Marketing Stack Explained</div>
+        <div class="lm-desc">How AI-native marketing intelligence actually works — no hype. The six components, how local AI and cloud AI are routed, and why your data never has to leave your environment. For the technically curious.</div>
+      </div>
+      <div class="lm-cta">
+        <a class="lm-btn" href="MIDAS_AI_Marketing_Stack_Explained.pdf" download>
+          <span class="lm-dl">PDF</span> Download Free Guide
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sec" style="padding:12px 2rem 24px">
+  <div class="w">
+    <div class="lm-strip" style="margin-top:0">
+      <div class="lm-icon">🔍</div>
+      <div class="lm-body">
+        <div class="lm-tag">Free Research Report — Competitive Intelligence</div>
+        <div class="lm-title">The Competitor Blind Spot</div>
+        <div class="lm-desc">Every significant competitor move leaves a detectable signal across search, paid, content, and social. This report explains the four monitoring layers, the five signals most businesses miss, and how to build a system that detects them continuously.</div>
+      </div>
+      <div class="lm-cta">
+        <a class="lm-btn" href="MIDAS_Competitor_Blind_Spot.pdf" download>
+          <span class="lm-dl">PDF</span> Download Free Report
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 </div>
-
 
 <!-- ===================== FAQ ===================== -->
 <div class="page" id="page-faq">
@@ -1169,6 +1340,47 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
         <a href="mailto:info@nettscience.com" class="btn btn-navy btn-lg" style="color:var(--white)">Email Us Directly</a>
       </div>
     </div>
+    <div style="margin-top:28px">
+      <div class="lm-strip">
+        <div class="lm-icon">📊</div>
+        <div class="lm-body">
+          <div class="lm-tag">Free Research Report</div>
+          <div class="lm-title">The Marketing Data Chaos Report</div>
+          <div class="lm-desc">The 7 symptoms of marketing data chaos, what each one costs you, and what unified intelligence looks like. A good place to start if you are still evaluating whether your current setup has a problem.</div>
+        </div>
+        <div class="lm-cta">
+          <a class="lm-btn" href="MIDAS_Marketing_Data_Chaos_Report.pdf" download>
+            <span class="lm-dl">PDF</span> Download Free Report
+          </a>
+        </div>
+      </div>
+      <div class="lm-strip" style="margin-top:0">
+        <div class="lm-icon">📡</div>
+        <div class="lm-body">
+          <div class="lm-tag">Free Strategy Playbook</div>
+          <div class="lm-title">The Share-of-Voice Playbook</div>
+          <div class="lm-desc">How to measure and grow your brand's visibility across search, content, paid, and social. Four SOV dimensions, measurement methods, targets by market position, and the intelligence calendar that connects monitoring to decisions.</div>
+        </div>
+        <div class="lm-cta">
+          <a class="lm-btn" href="MIDAS_Share_of_Voice_Playbook.pdf" download>
+            <span class="lm-dl">PDF</span> Download Free Playbook
+          </a>
+        </div>
+      </div>
+      <div class="lm-strip" style="margin-top:0">
+        <div class="lm-icon">📅</div>
+        <div class="lm-body">
+          <div class="lm-tag">Free Practical Playbook — Content</div>
+          <div class="lm-title">The 90-Day Content Intelligence Playbook</div>
+          <div class="lm-desc">A step-by-step framework for building content you can attribute to revenue. Month 1: audit and baseline. Month 2: build the measurement model. Month 3: intelligence in practice. Includes a manual vs. MIDAS comparison for each step.</div>
+        </div>
+        <div class="lm-cta">
+          <a class="lm-btn" href="MIDAS_90Day_Content_Intelligence_Playbook.pdf" download>
+            <span class="lm-dl">PDF</span> Download Free Playbook
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 </div>
@@ -1190,18 +1402,18 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
       <div>
         <span class="eye">Who We Are</span>
         <h2 class="tn mt3 mb4">The analytics firm behind the platform.</h2>
-        <p style="color:var(--mid);line-height:1.72;margin-bottom:14px">NettScience was founded in 2009 in Bengaluru, India as a marketing analytics and data-driven marketing solutions agency. Our journey began with a pioneering offshore analytics engagement for one of the world's largest digital marketing agencies in New York — an engagement that taught us what serious marketing intelligence looks like when it is done properly.</p>
-        <p style="color:var(--mid);line-height:1.72;margin-bottom:14px">Fifteen years and twenty-plus case studies later, we have served clients across Telecom, Financial Services, Pharmaceuticals, Healthcare, FMCG, Alcoholic Beverages, Retail, E-Commerce, Education, and Technology — including several Fortune 500 companies — across India and internationally.</p>
-        <p style="color:var(--mid);line-height:1.72">MIDAS is the product that systematises what we have learned across all of those engagements. It makes the outcomes of good analytical work continuously available — automatically, every morning — rather than as a periodic consultancy deliverable.</p>
+        <p style="color:var(--mid);line-height:1.72;margin-bottom:14px">NettScience was founded in 2009 in Bengaluru, India as a marketing analytics and data-driven marketing solutions agency. Our journey began with a pioneering offshore analytics engagement for a global digital marketing agency.</p>
+        <p style="color:var(--mid);line-height:1.72;margin-bottom:14px">Over the past fifteen years, we have served clients across Telecom, Financial Services, Pharmaceuticals, Healthcare, FMCG, Alcoholic Beverages, Retail, E-Commerce, Education, and Technology — including several Fortune 500 companies — across India and internationally.</p>
+        <p style="color:var(--mid);line-height:1.72;margin-bottom:14px">MIDAS is the product that systematises what we have learned across all of those engagements. It makes the outcomes of good analytical work continuously available — automatically, every morning — rather than as a periodic consultancy deliverable.</p>
       </div>
       <div>
         <div style="background:var(--off);border-radius:var(--r-lg);padding:28px;margin-bottom:20px">
           <div style="font-family:var(--f-m);font-size:10px;letter-spacing:2px;color:var(--teal);margin-bottom:16px;text-transform:uppercase">NettScience at a Glance</div>
           <div style="display:flex;flex-direction:column;gap:12px">
-            <div style="display:flex;gap:12px;align-items:center;padding:12px;background:var(--white);border-radius:var(--r);border-left:3px solid var(--teal)"><div style="font-family:var(--f-d);font-weight:800;font-size:1.6rem;color:var(--teal);width:60px;flex-shrink:0">2009</div><div style="font-size:.86rem;color:var(--mid)">Founded in Bengaluru, India</div></div>
-            <div style="display:flex;gap:12px;align-items:center;padding:12px;background:var(--white);border-radius:var(--r);border-left:3px solid var(--gold)"><div style="font-family:var(--f-d);font-weight:800;font-size:1.6rem;color:var(--gold);width:60px;flex-shrink:0">15+</div><div style="font-size:.86rem;color:var(--mid)">Years of marketing analytics consultancy</div></div>
-            <div style="display:flex;gap:12px;align-items:center;padding:12px;background:var(--white);border-radius:var(--r);border-left:3px solid var(--navy)"><div style="font-family:var(--f-d);font-weight:800;font-size:1.6rem;color:var(--navy);width:60px;flex-shrink:0">20+</div><div style="font-size:.86rem;color:var(--mid)">Published case studies across industries</div></div>
-            <div style="display:flex;gap:12px;align-items:center;padding:12px;background:var(--white);border-radius:var(--r);border-left:3px solid var(--teal)"><div style="font-family:var(--f-d);font-weight:800;font-size:1.6rem;color:var(--teal);width:60px;flex-shrink:0">F500</div><div style="font-size:.86rem;color:var(--mid)">Fortune 500 companies served</div></div>
+            <div style="display:flex;gap:16px;align-items:center;padding:12px;background:var(--white);border-radius:var(--r);border-left:3px solid var(--teal)"><div style="font-family:var(--f-d);font-weight:800;font-size:1.6rem;color:var(--teal);min-width:80px;flex-shrink:0">2009</div><div style="font-size:.86rem;color:var(--mid)">Founded in Bengaluru, India</div></div>
+            <div style="display:flex;gap:16px;align-items:center;padding:12px;background:var(--white);border-radius:var(--r);border-left:3px solid var(--gold)"><div style="font-family:var(--f-d);font-weight:800;font-size:1.6rem;color:var(--gold);min-width:80px;flex-shrink:0">15+</div><div style="font-size:.86rem;color:var(--mid)">Years of marketing analytics consultancy</div></div>
+            <div style="display:flex;gap:16px;align-items:center;padding:12px;background:var(--white);border-radius:var(--r);border-left:3px solid var(--navy)"><div style="font-family:var(--f-d);font-weight:800;font-size:1.6rem;color:var(--navy);min-width:80px;flex-shrink:0">20+</div><div style="font-size:.86rem;color:var(--mid)">Published case studies across industries</div></div>
+            <div style="display:flex;gap:16px;align-items:center;padding:12px;background:var(--white);border-radius:var(--r);border-left:3px solid var(--teal)"><div style="font-family:var(--f-d);font-weight:800;font-size:1.6rem;color:var(--teal);min-width:80px;flex-shrink:0">F500</div><div style="font-size:.86rem;color:var(--mid)">Fortune 500 companies served</div></div>
           </div>
         </div>
       </div>
@@ -1230,22 +1442,22 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
       <div>
         <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:28px;border-left:4px solid var(--gold)">
           <div style="font-family:var(--f-d);font-weight:800;font-size:1.3rem;color:var(--white);margin-bottom:4px">Raja Bhat</div>
-          <div style="font-family:var(--f-m);font-size:10px;letter-spacing:1.5px;color:var(--gold);margin-bottom:16px;text-transform:uppercase">Founder &amp; Managing Director, NettScience</div>
-          <p style="font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:14px">Raja leads NettScience with over 30 years of experience spanning sales, marketing communications, market research, and marketing analytics. His expertise covers marketing strategy, statistics, generative AI, big data analytics, and machine learning — the full spectrum of what MIDAS operationalises.</p>
+          <div style="font-family:var(--f-m);font-size:10px;letter-spacing:1.5px;color:var(--gold);margin-bottom:16px;text-transform:uppercase">Founder, NettScience</div>
+          <p style="font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:14px">Raja leads NettScience with over 25 years of experience spanning sales, marketing communications, market research, and marketing analytics. His expertise covers marketing strategy, statistics, AI, and machine learning — the full spectrum of what MIDAS operationalises.</p>
           <p style="font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:18px">The MIDAS platform reflects his philosophy directly: business problems first, analytical methods second. Intelligence that is accessible, not just impressive. Outcomes measured, not just outputs reported.</p>
           <div style="display:flex;flex-direction:column;gap:8px">
             <div style="background:rgba(255,255,255,.06);border-radius:var(--r);padding:10px 14px;font-size:.83rem;color:rgba(255,255,255,.7)">🎓 MBA in Marketing &amp; Finance — T.A. Pai Management Institute (TAPMI)</div>
             <div style="background:rgba(255,255,255,.06);border-radius:var(--r);padding:10px 14px;font-size:.83rem;color:rgba(255,255,255,.7)">🏅 Award of Achievement in Web Analytics — University of British Columbia</div>
-            <div style="background:rgba(255,255,255,.06);border-radius:var(--r);padding:10px 14px;font-size:.83rem;color:rgba(255,255,255,.7)">📍 30+ years in marketing, analytics, and AI across India and international markets</div>
+            <div style="background:rgba(255,255,255,.06);border-radius:var(--r);padding:10px 14px;font-size:.83rem;color:rgba(255,255,255,.7)">📍 20+ years in delivery of analytics solutions across India and International markets</div>
           </div>
         </div>
       </div>
       <div>
-        <h3 class="tw mb6">Our team's capabilities.</h3>
-        <p style="color:rgba(255,255,255,.62);line-height:1.68;margin-bottom:20px">MIDAS is not a platform built by engineers who learned marketing. It is a platform built by analysts who learned engineering. The distinction matters — the hardest problems in marketing intelligence are domain problems, not technical ones.</p>
+        <h3 class="tw mb6">Our capabilities.</h3>
+        <p style="color:rgba(255,255,255,.62);line-height:1.68;margin-bottom:20px">Our analytical capabilities span the full range of modern marketing intelligence — from statistical modelling and market research through to AI and data engineering. These are the disciplines that MIDAS operationalises.</p>
         <div style="display:flex;flex-direction:column;gap:10px">
           <div class="cd"><strong style="color:var(--gold)">Advanced Analytics</strong><p style="font-size:.85rem;color:rgba(255,255,255,.58);margin-top:4px">Predictive modelling, customer insights, marketing effectiveness measurement, financial analysis. The models powering MIDAS are battle-tested approaches refined through actual commercial use.</p></div>
-          <div class="cd"><strong style="color:var(--gold)">Digital Marketing Analytics</strong><p style="font-size:.85rem;color:rgba(255,255,255,.58);margin-top:4px">AI-powered campaign analytics, attribution modelling, customer journey insights, SEO and content analytics. The direct predecessor to MIDAS Layer 1 — now automated and continuous.</p></div>
+          <div class="cd"><strong style="color:var(--gold)">Digital Marketing Analytics</strong><p style="font-size:.85rem;color:rgba(255,255,255,.58);margin-top:4px">Campaign analytics, attribution modelling, customer journey insights, SEO and content analytics. The direct predecessor to MIDAS Layer 1 — now automated and continuous.</p></div>
           <div class="cd"><strong style="color:var(--gold)">Market Research</strong><p style="font-size:.85rem;color:rgba(255,255,255,.58);margin-top:4px">Qualitative and quantitative methods, consumer insights, competitive intelligence, opportunity assessment. This depth informs how MIDAS's competitive intelligence module is designed.</p></div>
           <div class="cd"><strong style="color:var(--gold)">BI &amp; Data Visualisation</strong><p style="font-size:.85rem;color:rgba(255,255,255,.58);margin-top:4px">Power BI, Tableau, Apache Superset. The MIDAS dashboard layer is the productised evolution of this capability — fully integrated with the data warehouse, not requiring external connections.</p></div>
         </div>
@@ -1329,7 +1541,7 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
           <div style="font-size:.88rem;color:var(--dark);line-height:1.7">
             <div>📍 Bengaluru, India</div>
             <div>📞 +91 98459 05041</div>
-            <div>✉ info@nettscience.com</div>
+            <div>✉ analytics@nettscience.com</div>
             <div style="margin-top:8px"><a href="https://nettscience.com" style="color:var(--teal);font-weight:600">nettscience.com ↗</a></div>
           </div>
         </div>
@@ -1340,7 +1552,7 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
 
 <div class="cta-band">
   <div class="w" style="position:relative;text-align:center">
-    <h2 class="tw">Ready to see fifteen years of marketing analytics expertise running automatically?</h2>
+    <h2 class="tw">See what fifteen years of marketing analytics work looks like when it runs automatically.</h2>
     <p class="lead lead-w mt4" style="max-width:560px;margin:12px auto 26px">MIDAS was built by analysts who have solved these problems for real clients across fifteen years. Every model, every recommendation structure, every dashboard reflects that depth.</p>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
       <button class="btn btn-gold btn-xl">Book a Demo</button>
@@ -1463,7 +1675,7 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
       <div>
         <div class="ftct">Company</div>
         <a class="ftl" href="https://nettscience.com">NettScience ↗</a>
-        <a class="ftl" href="#">Blog &amp; Resources</a>
+        <a class="ftl" href="/blog/">Blog &amp; Resources</a>
         <a class="ftl" href="#">Contact Us</a>
         <a class="ftl" onclick="showPage('sitemap')" style="cursor:pointer">Site Map</a>
         <div style="margin-top:14px">
