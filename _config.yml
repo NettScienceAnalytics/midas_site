@@ -20,6 +20,5 @@ exclude:
   - README.md
   - CNAME
   - "*.docx"
-  - "*.pdf"
-
+  
 # Keep things simple — no plugins needed for GitHub Pages' built-in Jekyll
