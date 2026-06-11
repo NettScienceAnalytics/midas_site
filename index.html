@@ -1856,40 +1856,35 @@ function submitGate(){
   var valid = name.length>1 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   if(!valid){ document.getElementById("lgErr").style.display="block"; return; }
 
-  var btn = document.getElementById("lgSubmit");
-  btn.disabled = true; btn.textContent = "Sending…";
   var file = lgPendingFile;
   var asset = lgAssetName(file);
 
+  // 1) Fire tracking events immediately
+  window.dataLayer.push({event:"generate_lead", asset_name:asset, asset_file:file, method:"lead_magnet_gate"});
+  window.dataLayer.push({event:"file_download", asset_name:asset, asset_file:file, file_extension:"pdf"});
+
+  // 2) Open the PDF NOW — directly from the click, so the browser won't block it
+  triggerDownload(file);
+
+  // 3) Save the lead to Formspree in the background (download has already started)
   fetch(LG_ENDPOINT, {
     method:"POST",
     headers:{"Accept":"application/json","Content-Type":"application/json"},
     body: JSON.stringify({name:name, email:email, asset:asset, source:"midas.nettscience.com"})
-  })
-  .then(function(r){ return r.ok ? r.json() : Promise.reject(r); })
-  .then(function(){
-    // success: fire tracking events, then release the PDF
-    window.dataLayer.push({event:"generate_lead", asset_name:asset, asset_file:file, method:"lead_magnet_gate"});
-    window.dataLayer.push({event:"file_download", asset_name:asset, asset_file:file, file_extension:"pdf"});
-    triggerDownload(file);
-    closeGate();
-    btn.disabled=false; btn.textContent="Download PDF";
-    document.getElementById("lgName").value=""; document.getElementById("lgEmail").value="";
-  })
-  .catch(function(){
-    // If the backend fails, don't punish the user — let them download, but log the failure
+  }).catch(function(){
     window.dataLayer.push({event:"lead_submit_error", asset_name:asset});
-    document.getElementById("lgErr").textContent="Something went wrong saving your details, but your download will start anyway.";
-    document.getElementById("lgErr").style.display="block";
-    triggerDownload(file);
-    btn.disabled=false; btn.textContent="Download PDF";
   });
+
+  // 4) Reset and close
+  closeGate();
+  document.getElementById("lgName").value=""; document.getElementById("lgEmail").value="";
 }
 
 function triggerDownload(file){
-  var link = document.createElement("a");
-  link.href = file; link.download = "";
-  document.body.appendChild(link); link.click(); document.body.removeChild(link);
+  // Most reliable method on GitHub Pages: open the PDF URL in a new tab.
+  // Runs from the user's click, so it is not popup-blocked. Falls back to same tab.
+  var win = window.open(file, "_blank");
+  if(!win){ window.location.href = file; }
 }
 </script>
 </body>
