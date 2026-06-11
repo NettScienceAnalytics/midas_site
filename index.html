@@ -367,7 +367,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span class="eye eye-d">Ready to start?</span>
     <h2 class="tw mt3">What would you like to do next?</h2>
     <div class="cta-opts">
-      <div class="copt"><div class="copt-l">For Businesses</div><div class="copt-t">Book a Demo</div><div class="copt-s">See all three layers on real data</div></div>
+      <a class="copt" href="#" onclick="openDemo('Business','copt_card');return false;" style="text-decoration:none"><div class="copt-l">For Businesses</div><div class="copt-t">Book a Demo</div><div class="copt-s">See all three layers on real data</div></a>
       <div class="copt"><div class="copt-l">For Agencies</div><div class="copt-t">Partner Conversation</div><div class="copt-s">Explore the reseller programme</div></div>
       <a class="copt nogate" href="MIDAS_AllLayers_Brief.pdf" target="_blank" rel="noopener" style="text-decoration:none"><div class="copt-l">Download</div><div class="copt-t">Platform Brief PDF</div><div class="copt-s">Full three-layer capability overview</div></a>
       <a class="copt nogate" href="MIDAS_Architecture_Deep_Dive.pdf" target="_blank" rel="noopener" style="text-decoration:none"><div class="copt-l">Download</div><div class="copt-t">Architecture Deep Dive</div><div class="copt-s">Stack, security, infrastructure</div></a>
@@ -1073,6 +1073,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span class="eye eye-d">Platform Architecture</span>
     <h1 class="tw mt3 mb4">Built on proven open-source.<br><span class="tg">Owned by no-one else.</span></h1>
     <p class="lead lead-w" style="max-width:660px">Every component is production-grade, widely deployed, and completely under our operational control. No vendor lock-in. No third-party data routing. No black box in the middle.</p>
+    <div class="hact"><button class="btn btn-gold btn-lg">Book a Demo</button><a class="btn btn-out btn-lg nogate" href="MIDAS_Architecture_Deep_Dive.pdf" target="_blank" rel="noopener">Download Architecture Brief</a></div>
   </div>
 </section>
 <section class="sec">
@@ -1718,6 +1719,13 @@ function showPage(id){
   document.querySelectorAll(".nl").forEach(l=>{
     if(l.getAttribute("onclick")&&l.getAttribute("onclick").includes("'"+id+"'"))l.classList.add("active");
   });
+  // Keep the URL in sync with the visible section (replaceState = no hashchange loop)
+  try{
+    var newHash = "#"+id;
+    if(window.location.hash !== newHash){
+      history.replaceState(null, "", (id==="home" ? window.location.pathname : newHash));
+    }
+  }catch(e){}
   window.scrollTo({top:0,behavior:"smooth"});
 }
 // Open the right section when arriving via a /#section link (e.g. from blog pages)
@@ -1819,7 +1827,14 @@ function lgAssetName(file){
     "MIDAS_Content_Attribution_Blind_Spot.pdf":"Content Attribution Blind Spot",
     "MIDAS_Competitor_Blind_Spot.pdf":"Competitor Blind Spot",
     "MIDAS_Share_of_Voice_Playbook.pdf":"Share-of-Voice Playbook",
-    "MIDAS_90Day_Content_Intelligence_Playbook.pdf":"90-Day Content Intelligence Playbook"
+    "MIDAS_90Day_Content_Intelligence_Playbook.pdf":"90-Day Content Intelligence Playbook",
+    "MIDAS_AllLayers_Brief.pdf":"Platform Brief (All Layers)",
+    "MIDAS_Layer1_Brief.pdf":"Layer 1 Brief",
+    "MIDAS_Layer2_Brief.pdf":"Layer 2 Brief",
+    "MIDAS_Layer3_Brief.pdf":"Layer 3 Brief",
+    "MIDAS_Client_Brief.pdf":"Client Brief",
+    "MIDAS_Agency_Brief.pdf":"Agency Brief",
+    "MIDAS_Architecture_Deep_Dive.pdf":"Architecture Deep Dive"
   };
   return map[file] || file.replace(/_/g," ").replace(/\.pdf$/i,"");
 }
@@ -1828,7 +1843,12 @@ function lgAssetName(file){
 document.addEventListener("click", function(e){
   var a = e.target.closest && e.target.closest('a[href$=".pdf"]');
   if(!a) return;
-  if(a.classList.contains("nogate")) return; // ungated briefs open directly
+  if(a.classList.contains("nogate")){
+    // Ungated brief: open directly, but still track the download
+    var nf = a.getAttribute("href");
+    window.dataLayer.push({event:"file_download", asset_name:lgAssetName(nf), asset_file:nf, file_extension:"pdf", gated:"no"});
+    return; // let the link open normally in a new tab
+  }
   e.preventDefault();
   lgPendingFile = a.getAttribute("href");
   openGate(lgPendingFile);
@@ -1891,6 +1911,136 @@ function triggerDownload(file){
   var win = window.open(url, "_blank");
   // If the popup was blocked, fall back to navigating the current tab.
   if(!win){ window.location.href = url; }
+}
+</script>
+
+<!-- ===== DEMO REQUEST MODAL ===== -->
+<style>
+.dm-overlay{display:none;position:fixed;inset:0;z-index:5000;background:rgba(15,28,48,.6);backdrop-filter:blur(3px);align-items:center;justify-content:center;padding:20px}
+.dm-overlay.open{display:flex}
+.dm-modal{background:var(--white);border-radius:var(--r-lg);max-width:480px;width:100%;padding:34px 32px;box-shadow:0 24px 60px rgba(15,28,48,.35);position:relative;font-family:var(--f-b);max-height:92vh;overflow-y:auto}
+.dm-close{position:absolute;top:14px;right:16px;background:none;border:none;font-size:22px;color:var(--mid);cursor:pointer;line-height:1}
+.dm-tag{font-family:var(--f-m,monospace);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.dm-title{font-family:var(--f-d);font-weight:800;font-size:1.35rem;color:var(--navy-deep);margin-bottom:6px;line-height:1.2}
+.dm-sub{font-size:.88rem;color:var(--mid);line-height:1.55;margin-bottom:20px}
+.dm-field{margin-bottom:13px}
+.dm-field label{display:block;font-size:.78rem;font-weight:600;color:var(--navy);margin-bottom:5px}
+.dm-field input,.dm-field select,.dm-field textarea{width:100%;padding:11px 13px;border:1px solid var(--light);border-radius:var(--r);font-size:.92rem;font-family:var(--f-b);color:var(--navy-deep);box-sizing:border-box;background:var(--white)}
+.dm-field textarea{resize:vertical;min-height:72px}
+.dm-field input:focus,.dm-field select:focus,.dm-field textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(15,123,138,.12)}
+.dm-row{display:flex;gap:12px}
+.dm-row .dm-field{flex:1}
+.dm-submit{width:100%;background:var(--gold);color:var(--navy-deep);border:none;border-radius:var(--r);padding:13px;font-size:.95rem;font-weight:800;cursor:pointer;transition:var(--tr);margin-top:6px}
+.dm-submit:hover{background:var(--gold-light)}
+.dm-submit:disabled{opacity:.6;cursor:wait}
+.dm-fine{font-size:.72rem;color:var(--mid);text-align:center;margin-top:12px;line-height:1.5}
+.dm-err{font-size:.8rem;color:#C0392B;margin-top:10px;display:none}
+.dm-ok{display:none;text-align:center;padding:14px 0}
+.dm-ok .dm-okmark{font-size:2.4rem;color:var(--teal);margin-bottom:8px}
+</style>
+<div class="dm-overlay" id="dmOverlay">
+  <div class="dm-modal" role="dialog" aria-modal="true" aria-labelledby="dmTitle">
+    <button class="dm-close" onclick="closeDemo()" aria-label="Close">&times;</button>
+    <div id="dmFormWrap">
+      <div class="dm-tag">Book a Demo</div>
+      <div class="dm-title" id="dmTitle">See MIDAS on your data</div>
+      <div class="dm-sub">Tell us a little about you and we'll set up a personalised walkthrough across all three layers.</div>
+      <div class="dm-row">
+        <div class="dm-field"><label for="dmName">Name</label><input type="text" id="dmName" autocomplete="name" placeholder="Your name"></div>
+        <div class="dm-field"><label for="dmEmail">Work email</label><input type="email" id="dmEmail" autocomplete="email" placeholder="you@company.com"></div>
+      </div>
+      <div class="dm-row">
+        <div class="dm-field"><label for="dmCompany">Company</label><input type="text" id="dmCompany" autocomplete="organization" placeholder="Company name"></div>
+        <div class="dm-field"><label for="dmRole">Role</label><input type="text" id="dmRole" placeholder="e.g. Head of Marketing"></div>
+      </div>
+      <div class="dm-field">
+        <label for="dmAudience">I'm a…</label>
+        <select id="dmAudience">
+          <option value="Business">Business / Brand</option>
+          <option value="Agency">Agency</option>
+        </select>
+      </div>
+      <div class="dm-field"><label for="dmMessage">What would you like to see? (optional)</label><textarea id="dmMessage" placeholder="Your goals, current stack, or anything you'd like the demo to focus on."></textarea></div>
+      <button class="dm-submit" id="dmSubmit" onclick="submitDemo()">Request My Demo</button>
+      <div class="dm-err" id="dmErr">Please enter your name, a valid email, and your company.</div>
+      <div class="dm-fine">We'll reach out to schedule. No spam, ever.</div>
+    </div>
+    <div class="dm-ok" id="dmOk">
+      <div class="dm-okmark">✓</div>
+      <div class="dm-title">Request received</div>
+      <div class="dm-sub" style="margin-bottom:0">Thanks — we'll be in touch shortly to schedule your MIDAS walkthrough.</div>
+      <button class="dm-submit" style="margin-top:18px" onclick="closeDemo()">Done</button>
+    </div>
+  </div>
+</div>
+<script>
+// ===== Demo request logic =====
+// IMPORTANT: replace with your SEPARATE Formspree demo form endpoint.
+var DEMO_ENDPOINT = "https://formspree.io/f/REPLACE_WITH_DEMO_FORM_ID";
+window.dataLayer = window.dataLayer || [];
+
+function openDemo(audience, source){
+  document.getElementById("dmFormWrap").style.display = "block";
+  document.getElementById("dmOk").style.display = "none";
+  document.getElementById("dmErr").style.display = "none";
+  if(audience){ try{ document.getElementById("dmAudience").value = audience; }catch(e){} }
+  document.getElementById("dmOverlay").classList.add("open");
+  window.dataLayer.push({event:"book_demo_click", cta_source:(source||"button"), audience:(audience||"unspecified")});
+  setTimeout(function(){var n=document.getElementById("dmName"); if(n) n.focus();},80);
+}
+function closeDemo(){
+  document.getElementById("dmOverlay").classList.remove("open");
+}
+document.getElementById("dmOverlay").addEventListener("click",function(e){ if(e.target===this) closeDemo(); });
+document.addEventListener("keydown",function(e){ if(e.key==="Escape") closeDemo(); });
+
+// Wire every "Book a Demo" / "Request a Partner Conversation" button to open the modal
+document.addEventListener("click", function(e){
+  var btn = e.target.closest && e.target.closest('button.btn, a.btn, .nl');
+  if(!btn) return;
+  var label = (btn.textContent||"").trim();
+  if(label === "Book a Demo"){
+    e.preventDefault();
+    openDemo("Business", "book_a_demo");
+  } else if(label === "Request a Partner Conversation"){
+    e.preventDefault();
+    openDemo("Agency", "partner_conversation");
+  }
+});
+
+function submitDemo(){
+  var name = document.getElementById("dmName").value.trim();
+  var email = document.getElementById("dmEmail").value.trim();
+  var company = document.getElementById("dmCompany").value.trim();
+  var role = document.getElementById("dmRole").value.trim();
+  var audience = document.getElementById("dmAudience").value;
+  var message = document.getElementById("dmMessage").value.trim();
+  var valid = name.length>1 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) && company.length>0;
+  if(!valid){ document.getElementById("dmErr").style.display="block"; return; }
+
+  var btn = document.getElementById("dmSubmit");
+  btn.disabled = true; btn.textContent = "Sending…";
+
+  window.dataLayer.push({event:"request_demo", audience:audience, company:company, role:role});
+
+  fetch(DEMO_ENDPOINT, {
+    method:"POST",
+    headers:{"Accept":"application/json","Content-Type":"application/json"},
+    body: JSON.stringify({name:name, email:email, company:company, role:role, audience:audience, message:message, source:"midas.nettscience.com — demo request"})
+  })
+  .then(function(r){ return r.ok ? r.json() : Promise.reject(r); })
+  .then(function(){
+    document.getElementById("dmFormWrap").style.display = "none";
+    document.getElementById("dmOk").style.display = "block";
+    btn.disabled=false; btn.textContent="Request My Demo";
+    ["dmName","dmEmail","dmCompany","dmRole","dmMessage"].forEach(function(id){document.getElementById(id).value="";});
+  })
+  .catch(function(){
+    window.dataLayer.push({event:"demo_submit_error"});
+    document.getElementById("dmErr").textContent = "Something went wrong sending your request. Please email analytics@nettscience.com and we'll set it up.";
+    document.getElementById("dmErr").style.display="block";
+    btn.disabled=false; btn.textContent="Request My Demo";
+  });
 }
 </script>
 </body>
