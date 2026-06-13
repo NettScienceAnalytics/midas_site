@@ -10,7 +10,7 @@ Walk into almost any mid-sized marketing agency and you'll find the same quiet i
 
 And the agency is giving it away — folded into an execution retainer, priced as if it were an afterthought.
 
-After fifteen years building marketing analytics for agencies, starting with one of the largest in New York, I've come to believe this is the single biggest unsold product in the agency world. Not a new service to invent. One you're already delivering, just not naming, packaging, or charging for.
+After fifteen years building marketing analytics for agencies, starting with one of the largest in the world, I've come to believe this is the single biggest unsold product in the agency world. Not a new service to invent. One you're already delivering, just not naming, packaging, or charging for.
 
 ## The trap: selling hours when clients want certainty
 
