@@ -13,6 +13,8 @@ This is an understandable failure. First-party data is harder to collect than it
 
 But the case for doing the work has never been stronger. Not because of regulatory pressure. Because the data is genuinely better.
 
+---
+
 ## What First-Party Data Actually Is — and Why It Outperforms Third-Party Data
 
 First-party data is data you collect directly from your customers and prospects — with their consent, through your own channels. It includes: what they tell you in surveys, what they do on your website and app, what they buy, how they respond to your emails, what they tell your sales team, and how satisfied they are after purchasing.
