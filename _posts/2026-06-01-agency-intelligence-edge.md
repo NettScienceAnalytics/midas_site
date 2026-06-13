@@ -2,7 +2,7 @@
 layout: post
 title: "Your Agency Is Already Doing the Hard Part. You're Just Giving It Away"
 subtitle: "Most agencies sit on a high-margin product they never sell: intelligence. Here's why the analytics work you bury inside retainers is the thing clients would actually pay a premium for — and how to start charging for it."
-date: 2026-06-08
+date: 2026-06-01
 author: Raja Bhat
 description: "Agencies treat analytics as overhead buried in execution retainers. It's actually their most defensible, highest-margin product. Here's how to reframe and sell it."
 ---
