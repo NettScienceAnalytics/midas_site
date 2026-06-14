@@ -7,7 +7,7 @@
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W2L5FKGV');</script>
+})(window,document,'script','dataLayer','GTM-REPLACE_WITH_YOUR_ID');</script>
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -132,7 +132,7 @@ footer{background:#080E1C;padding:54px 2rem 22px}.ft-inner{max-width:1200px;marg
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W2L5FKGV"
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-REPLACE_WITH_YOUR_ID"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <nav class="nav">
@@ -1726,6 +1726,23 @@ function showPage(id){
       history.replaceState(null, "", (id==="home" ? window.location.pathname : newHash));
     }
   }catch(e){}
+  // Fire a virtual pageview so each SPA section shows up in GA4 "Pages and screens"
+  try{
+    var titles = {
+      home:"Home", platform:"Platform", l1:"Layer 1 - Data & Intelligence",
+      l2:"Layer 2 - Decision Automation", l3:"Layer 3 - Channel Execution",
+      businesses:"For Businesses", agencies:"For Agencies",
+      technology:"Technology", about:"About", faq:"FAQ"
+    };
+    var path = (id==="home" ? "/" : "/"+id);
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "virtual_pageview",
+      page_path: path,
+      page_title: (titles[id] || id) + " | MIDAS",
+      page_location: window.location.origin + path
+    });
+  }catch(e){}
   window.scrollTo({top:0,behavior:"smooth"});
 }
 // Open the right section when arriving via a /#section link (e.g. from blog pages)
@@ -1812,7 +1829,7 @@ document.addEventListener("click",function(e){
 <script>
 // ===== Lead-gate logic =====
 // IMPORTANT: replace the endpoint below with your real Formspree form URL.
-var LG_ENDPOINT = "https://formspree.io/f/xpqelowq";
+var LG_ENDPOINT = "https://formspree.io/f/REPLACE_WITH_YOUR_ID";
 window.dataLayer = window.dataLayer || [];
 var lgPendingFile = null;
 
@@ -1976,7 +1993,7 @@ function triggerDownload(file){
 <script>
 // ===== Demo request logic =====
 // IMPORTANT: replace with your SEPARATE Formspree demo form endpoint.
-var DEMO_ENDPOINT = "https://formspree.io/f/mbdeaelo";
+var DEMO_ENDPOINT = "https://formspree.io/f/REPLACE_WITH_DEMO_FORM_ID";
 window.dataLayer = window.dataLayer || [];
 
 function openDemo(audience, source){
