@@ -1743,9 +1743,6 @@ function showPage(id){
       page_title: (titles[id] || id) + " | MIDAS",
       page_location: loc
   });
-This touches only the broken line and leaves your GTM and Formspree IDs untouched. This is the clean way.
-Option B — upload my file, then re-paste all three IDs. If you upload my index.html, you'd then have to immediately edit it and restore: your real GTM- ID (two places), your real lead-magnet Formspree URL (LG_ENDPOINT), and your real demo Formspree URL (DEMO_ENDPOINT). More error-prone.
-Go with Option A — one small edit, no IDs to touch. Commit, wait a minute, then test the section titles in Realtime.
   }catch(e){}
   window.scrollTo({top:0,behavior:"smooth"});
 }
