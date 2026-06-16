@@ -17,7 +17,9 @@ When every ad platform measures its own contribution, you get a sum that adds up
 
 The result is a budget allocated on flattering, self-reported numbers rather than on what truly moved the customer. Spend flows to the channels best at *claiming* credit, not the ones best at *earning* it.
 ![Three platforms each claiming the same conversion, totalling 130%, versus the de-duplicated 100% reality](/assets/images/attribution-sum.png)
+
 *When every platform claims the same sale, reported conversions exceed reality.*
+
 ## What changes with a cross-channel view
 
 The fix isn't another dashboard. It's a layer that sits above the platforms, ingests every channel's data, and reasons across them as one system:
