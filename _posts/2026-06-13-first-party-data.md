@@ -59,9 +59,6 @@ Your sales team knows which objections prospects raise, which competitors they a
 
 The fix requires no sophisticated technology. A mandatory CRM field — pre-coded objection categories, a competitor dropdown, a free-text notes field — populated after every qualified call. What you gain is a direct feed from market reality to your marketing data: which channels produce the prospects your team closes most effectively, and which competitors appear most frequently in deals that stall.
 
-![Four first-party data sources — surveys, NPS, stated preference, sales intelligence — feeding one unified intelligence layer](/assets/images/first-party-sources@2x.png)
-*The challenge was never data quality. It was integration.*
-
 ---
 
 ## How MIDAS Creates a Unified First-Party Intelligence System
@@ -71,6 +68,9 @@ The challenge with first-party data has never been quality. It has been integrat
 MIDAS solves this through its unified PostgreSQL data warehouse — a single data model that treats first-party sources as first-class inputs alongside paid media, organic, CRM, and email data.
 
 For each first-party source, MIDAS creates a standardised intake table. Survey data arrives via n8n webhooks in real time. Sales team intelligence flows through the existing CRM integration. The result: first-party data sits in the same warehouse as your Google Ads spend, your attribution models, and your lead scores — queryable together, available to the AI recommendation system as context for every decision it surfaces.
+
+![Four first-party data sources — surveys, NPS, stated preference, sales intelligence — feeding one unified intelligence layer](/assets/images/first-party-sources@2x.png)
+*The challenge was never data quality. It was integration.*
 
 **Four capabilities this directly enables:**
 
