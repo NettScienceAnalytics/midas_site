@@ -38,6 +38,9 @@ Make the intelligence a named line item. When analytics lives inside an undiffer
 
 Show the trajectory, not just the snapshot. A single month's report is a photo. What clients pay a premium for is the curve — the evidence that your decisions are improving outcomes over time. "Here's where we were at month one, here's where we are at month twelve, here's why" is a renewal-winning conversation that activity reporting can never have.
 
+![Value stack: Intelligence as the defensible high-margin product above Execution as the replaceable commodity](/assets/images/agency-value-stack@2x.png)
+*Execution is replaceable. Intelligence is the product you already produce — and give away.*
+
 ## The thing standing in the way
 
 If this is so valuable, why don't more agencies do it? Because the infrastructure is genuinely hard. Unifying data across every channel, de-duplicating conversions that three platforms all claim, reasoning across the whole picture rather than platform by platform — that's exactly the work that enterprise analytics platforms charge six figures and six-month implementations to deliver. For a mid-market agency, building that in-house means hiring data scientists and standing up infrastructure that the margins don't support.
