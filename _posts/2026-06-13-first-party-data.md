@@ -59,6 +59,9 @@ Your sales team knows which objections prospects raise, which competitors they a
 
 The fix requires no sophisticated technology. A mandatory CRM field — pre-coded objection categories, a competitor dropdown, a free-text notes field — populated after every qualified call. What you gain is a direct feed from market reality to your marketing data: which channels produce the prospects your team closes most effectively, and which competitors appear most frequently in deals that stall.
 
+![Four first-party data sources — surveys, NPS, stated preference, sales intelligence — feeding one unified intelligence layer](/assets/images/first-party-sources@2x.png)
+*The challenge was never data quality. It was integration.*
+
 ---
 
 ## How MIDAS Creates a Unified First-Party Intelligence System
