@@ -16,6 +16,7 @@ For most mid-market teams, that question goes unanswered. Not for lack of data â
 When every ad platform measures its own contribution, you get a sum that adds up to more than 100%. Meta says it drove the sale. Google says it did. Your last-click model quietly hands all the credit to whichever touch happened to come last â€” usually branded search, which was going to convert anyway.
 
 The result is a budget allocated on flattering, self-reported numbers rather than on what truly moved the customer. Spend flows to the channels best at *claiming* credit, not the ones best at *earning* it.
+
 ![Three platforms each claiming the same conversion, totalling 130%, versus the de-duplicated 100% reality](/assets/images/attribution-sum@2x.png)
 
 *When every platform claims the same sale, reported conversions exceed reality.*
