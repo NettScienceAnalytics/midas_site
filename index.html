@@ -173,7 +173,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div>
       <div class="hbadge"><div class="hbdot"></div><span class="hbtext">Human-in-the-Loop · All Three Layers Live</span></div>
       <h1 class="htitle">Marketing Intelligence<br>that <span>Knows. Decides. Acts.</span></h1>
-      <p class="hsub">MIDAS unifies all your marketing data, models it with AI, and turns insights into recommended actions. You stay in control — every action is human-approved before it runs. Intelligent automation with a human in the loop, across all three layers, live now.</p>
+      <p class="hsub">MIDAS unifies all your marketing data, models it with AI, and turns insights into recommended actions. You stay in control — nothing runs without your approval. Intelligent automation with a human in the loop, across all three layers, live now.</p>
       <div class="hact">
         <button class="btn btn-gold btn-lg">Book a Call</button>
         <button class="btn btn-out btn-lg" onclick="showPage('platform')">Explore the Platform</button>
@@ -1972,8 +1972,8 @@ function triggerDownload(file){
           <option value="Agency">Agency</option>
         </select>
       </div>
-      <div class="dm-field"><label for="dmMessage">What would you like to see? (optional)</label><textarea id="dmMessage" placeholder="Your goals, current stack, or anything you'd like the demo to focus on."></textarea></div>
-      <button class="dm-submit" id="dmSubmit" onclick="submitDemo()">Request My Demo</button>
+      <div class="dm-field"><label for="dmMessage">What would you like to discuss? (optional)</label><textarea id="dmMessage" placeholder="Your goals, current stack, or anything you'd like to cover on the call."></textarea></div>
+      <button class="dm-submit" id="dmSubmit" onclick="submitDemo()">Request My Call</button>
       <div class="dm-err" id="dmErr">Please enter your name, a valid email, and your company.</div>
       <div class="dm-fine">We'll reach out to schedule. No spam, ever.</div>
     </div>
@@ -2044,14 +2044,14 @@ function submitDemo(){
   .then(function(){
     document.getElementById("dmFormWrap").style.display = "none";
     document.getElementById("dmOk").style.display = "block";
-    btn.disabled=false; btn.textContent="Request My Demo";
+    btn.disabled=false; btn.textContent="Request My Call";
     ["dmName","dmEmail","dmCompany","dmRole","dmMessage"].forEach(function(id){document.getElementById(id).value="";});
   })
   .catch(function(){
     window.dataLayer.push({event:"demo_submit_error"});
     document.getElementById("dmErr").textContent = "Something went wrong sending your request. Please email analytics@nettscience.com and we'll set it up.";
     document.getElementById("dmErr").style.display="block";
-    btn.disabled=false; btn.textContent="Request My Demo";
+    btn.disabled=false; btn.textContent="Request My Call";
   });
 }
 </script>
