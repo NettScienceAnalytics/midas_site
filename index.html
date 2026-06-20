@@ -1898,7 +1898,7 @@ function triggerDownload(file){
         </select>
       </div>
       <div class="dm-field"><label for="dmMessage">What would you like to discuss? (optional)</label><textarea id="dmMessage" placeholder="Your goals, current stack, or anything you'd like to cover on the call."></textarea></div>
-      <button class="dm-submit" id="dmSubmit" onclick="submitDemo()">Request My Call</button>
+      <button class="dm-submit" id="dmSubmit" onclick="submitDemo()">Submit</button>
       <div class="dm-err" id="dmErr">Please enter your name, a valid email, and your company.</div>
       <div class="dm-fine">We'll reach out to schedule. No spam, ever.</div>
     </div>
@@ -1969,14 +1969,14 @@ function submitDemo(){
   .then(function(){
     document.getElementById("dmFormWrap").style.display = "none";
     document.getElementById("dmOk").style.display = "block";
-    btn.disabled=false; btn.textContent="Request My Call";
+    btn.disabled=false; btn.textContent="Submit";
     ["dmName","dmEmail","dmCompany","dmRole","dmMessage"].forEach(function(id){document.getElementById(id).value="";});
   })
   .catch(function(){
     window.dataLayer.push({event:"demo_submit_error"});
     document.getElementById("dmErr").textContent = "Something went wrong sending your request. Please email analytics@nettscience.com and we'll set it up.";
     document.getElementById("dmErr").style.display="block";
-    btn.disabled=false; btn.textContent="Request My Call";
+    btn.disabled=false; btn.textContent="Submit";
   });
 }
 </script>
