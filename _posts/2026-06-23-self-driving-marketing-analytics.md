@@ -9,7 +9,7 @@ description: "AI in marketing analytics works best as a copilot, not an autopilo
 
 There's enormous excitement right now about handing marketing decisions to AI. Ask a question in plain English, get the right number. Let the system reallocate budget on its own. Watch dashboards write themselves. The promise is autonomy: marketing that runs itself.
 
-In controlled demos, this already works most of the time. But "most of the time" is the problem. In real marketing decisions — where budget is reallocated, where a CMO reports numbers upward, where trust is on the line — **90% right simply doesn't cut it.**
+In controlled environments, this already works most of the time. But "most of the time" is the problem. In real marketing decisions — where budget is reallocated, where a CMO reports numbers upward, where trust is on the line — **90% right simply doesn't cut it.**
 
 The most useful analogy is self-driving cars. We're not at full autonomy. What we have today is more like lane assist: the system helps, suggests, and automates parts of the drive, but a human stays ready to take over. That's exactly the right model for AI in marketing analytics — and it's the principle MIDAS is built on.
 
@@ -63,7 +63,7 @@ These are the building blocks on the road to autonomy. Not just a smarter model 
 
 ## The honest lessons from building this
 
-A few things become clear quickly when you build AI into real analytics rather than a demo:
+A few things become clear quickly when you build AI into real analytics:
 
 - **Real marketing data is messy.** In a clean benchmark, every field is labelled and every table makes sense. In a real account, channels are named inconsistently, some data is available but not trusted, and definitions drift. No amount of clever prompting overcomes ambiguous data — the AI needs help from metadata, from structure, and from humans.
 - **More context isn't always better.** Stuffing everything into the model can cause as many errors as too little — it mixes sources and picks the wrong fields. Precision in what you feed the model matters more than volume.
