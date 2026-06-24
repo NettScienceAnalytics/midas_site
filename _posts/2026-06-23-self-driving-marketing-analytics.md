@@ -14,6 +14,7 @@ In controlled demos, this already works most of the time. But "most of the time"
 The most useful analogy is self-driving cars. We're not at full autonomy. What we have today is more like lane assist: the system helps, suggests, and automates parts of the drive, but a human stays ready to take over. That's exactly the right model for AI in marketing analytics — and it's the principle MIDAS is built on.
 
 ![The road to self-driving marketing analytics: a four-stage spectrum from cruise control (automated reports, no reasoning) through lane assist (AI recommends, human approves every action — where MIDAS operates today) to supervised autonomy and full autonomy.](/assets/images/autonomy-spectrum.svg)
+
 *AI in marketing analytics follows the same path as autonomous driving. Most tools overpromise full autonomy; MIDAS operates trustworthily at lane assist today.*
 
 ## Two kinds of marketing AI tasks
