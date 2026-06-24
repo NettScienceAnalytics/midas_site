@@ -13,7 +13,7 @@ In controlled demos, this already works most of the time. But "most of the time"
 
 The most useful analogy is self-driving cars. We're not at full autonomy. What we have today is more like lane assist: the system helps, suggests, and automates parts of the drive, but a human stays ready to take over. That's exactly the right model for AI in marketing analytics — and it's the principle MIDAS is built on.
 
-![The road to self-driving marketing analytics: a four-stage spectrum from cruise control (automated reports, no reasoning) through lane assist (AI recommends, human approves every action — where MIDAS operates today) to supervised autonomy and full autonomy.](/assets/images/autonomy-spectrum.svg)
+![The road to self-driving marketing analytics: a four-stage spectrum from cruise control (automated reports, no reasoning) through lane assist (AI recommends, human approves every action — where MIDAS operates today) to supervised autonomy and full autonomy.](/assets/images/autonomy-spectrum.png)
 
 *AI in marketing analytics follows the same path as autonomous driving. Most tools overpromise full autonomy; MIDAS operates trustworthily at lane assist today.*
 
@@ -54,7 +54,8 @@ In MIDAS, that means an AI recommendation never arrives as a bare instruction. I
 
 The marketer can approve, modify, defer, or reject — right there, without leaving the interface. It's assisted driving: if you need to take the wheel, the controls are under your hands, not in another system.
 
-![How a MIDAS recommendation reaches a decision: the AI presents situation, diagnosis, proposed action, and expected outcome, which flows into a human-in-the-loop checkpoint where the marketer can approve, modify, defer, or reject before anything runs.](/assets/images/approval-flow.svg)
+![How a MIDAS recommendation reaches a decision: the AI presents situation, diagnosis, proposed action, and expected outcome, which flows into a human-in-the-loop checkpoint where the marketer can approve, modify, defer, or reject before anything runs.](/assets/images/approval-flow.png)
+
 *Every MIDAS recommendation arrives with its reasoning exposed — and a human approves before anything runs.*
 
 ## What full self-driving analytics would actually require
