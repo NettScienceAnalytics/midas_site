@@ -56,6 +56,7 @@ Building entirely from scratch flips a different set of costs onto you: you now 
 White-label sits between these. You get a platform that's already solved the hard parts — unification, attribution, multi-tenancy, branded dashboards — delivered as a service, with your brand on the front and predictable economics underneath. No per-viewer meter, and no data-science team to hire.
 
 ![Comparison of build vs. buy vs. white-label for agency analytics across time to launch, cost model, branding depth, multi-tenant security, who operates it, and the intelligence layer — showing white-label (MIDAS) as the only option that avoids both the engineering burden and per-seat licensing.](/assets/images/build-buy-whitelabel.png)
+
 *Building from scratch means owning the engineering; per-seat tools tax every viewer. White-label gives you branded, managed intelligence without either.*
 
 ## What's under the hood of MIDAS
