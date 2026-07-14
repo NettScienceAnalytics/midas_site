@@ -15,7 +15,8 @@ The second is a quiet disaster. **No marketing technology activity scores above 
 
 Read those together. Adoption has surged. Performance has flatlined.
 
-![AI use in marketing activities rose from 13.1% in 2024 to 24.2% in 2026, an 85% increase, while martech performance stayed flat at 4.5 on a 7-point scale. The top barriers are lack of budget (20.1%), integration and data architecture (19.1%), bandwidth/time/focus (14.1%), and talent management (13.1%) — none of them technological.](/assets/images/ai-adoption-vs-roi.svg)
+![AI use in marketing activities rose from 13.1% in 2024 to 24.2% in 2026, an 85% increase, while martech performance stayed flat at 4.5 on a 7-point scale. The top barriers are lack of budget (20.1%), integration and data architecture (19.1%), bandwidth/time/focus (14.1%), and talent management (13.1%) — none of them technological.](/assets/images/ai-adoption-vs-roi.png)
+
 *Source: The CMO Survey, 2026. Adoption nearly doubled. Performance didn't move — and the barriers have nothing to do with the software.*
 
 So the question worth asking isn't "should we adopt AI?" That decision has already been made, by nearly everyone. The question is why the enormous investment in marketing technology is producing such stubbornly mediocre returns — and whether buying another tool will change anything.
