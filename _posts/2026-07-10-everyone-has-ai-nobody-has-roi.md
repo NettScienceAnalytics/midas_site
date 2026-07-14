@@ -2,7 +2,7 @@
 layout: post
 title: "Everyone Has AI. Almost Nobody Has ROI From It."
 subtitle: "AI use in marketing has nearly doubled in two years. Marketing technology performance hasn't improved at all. The gap isn't a technology problem — and buying another tool won't close it."
-date: 2026-06-30
+date: 2026-07-10
 author: Raja Bhat
 description: "The CMO Survey shows AI adoption in marketing has surged while martech performance has flatlined. The barriers are organizational — bandwidth, talent, integration. Here's why a managed service closes that gap when another platform can't."
 ---
