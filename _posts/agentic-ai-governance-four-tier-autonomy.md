@@ -1,9 +1,10 @@
 ---
+layout: post
 title: "Agentic AI Governance: Why 40% of Projects Will Fail"
-meta_description: "Gartner predicts 40%+ of agentic AI projects will be canceled by 2027 — not from weak models, but weak governance. Here's what to build instead."
-target_keyword: "agentic AI governance"
-word_count: 1120
+subtitle: "Gartner has a number that should be sitting on every CMO's desk right now: more than 40% of agentic AI projects will be canceled by the end of 2027."
 date: 2026-07-30
+author: Raja Bhat
+description: "Gartner predicts 40%+ of agentic AI projects will be canceled by 2027 — not from weak models, but weak governance. Here's what to build instead.
 ---
 
 <!-- hero image concept: A control room dashboard showing an AI agent's proposed action paused for human review, with a clear "approve" button highlighted — conveys oversight without slowing things down | alt: Marketing dashboard showing an AI agent action awaiting human approval -->
